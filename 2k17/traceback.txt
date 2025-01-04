@@ -1,0 +1,54 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 16, in script
+    b"Привет я текст-долбаеб"
+Exception: Style 'say_character' does not exist.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 16, in script
+    b"Привет я текст-долбаеб"
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\exports.py", line 1474, in say
+    who(what, *args, **kwargs)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\character.py", line 1352, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\character.py", line 1003, in do_display
+    display_say(who,
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\character.py", line 693, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 4055, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\screen.py", line 481, in visit_all
+    self.child.visit_all(callback, seen=None)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 674, in visit_all
+    for d in self.visit():
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 1258, in visit
+    self.style._visit_window(rv.append)
+  File "style.pyx", line 541, in renpy.style.StyleCore._visit_window
+  File "style.pyx", line 528, in renpy.style.StyleCore._get_unoffset
+  File "style.pyx", line 493, in renpy.style.StyleCore._get
+  File "style.pyx", line 679, in renpy.style.build_style
+  File "style.pyx", line 142, in renpy.style.get_full_style
+  File "style.pyx", line 98, in renpy.style.get_style
+Exception: Style 'say_character' does not exist.
+
+Windows-10-10.0.19044 AMD64
+Ren'Py 8.1.3.23091805
+2k17 1.0
+Sat Jan  4 15:52:34 2025
