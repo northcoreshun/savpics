@@ -1524,6 +1524,38 @@ screen quick_menu():
             textbutton _("Авто") action Preference("auto-forward", "toggle")
             textbutton _("Меню") action ShowMenu()
 
+#screen back_for:
+
+#    imagemap:
+
+#        idle"gui/back_for.png"
+#       hover"gui/back_for_hover.png"
+
+#        hotspot(0, 0, 396, 1080) action ShowMenu('history')
+#        hotspot(1594, 0, 396, 1080) action Skip() alternate Skip(fast=True, confirm=True)
+
+screen back_for:
+    imagebutton:
+        xanchor 0.0
+        yanchor 0.0
+        xpos 0.0
+        ypos 0.0
+        idle "gui/back_for.png"  
+        hover "gui/left_bar.png"  
+        action ShowMenu("history")  
+    
+    imagebutton:
+        xanchor 1.0
+        yanchor 0.0
+        xpos 1.0
+        ypos 0.0
+        idle "gui/back_for.png"  
+        hover "gui/right_bar.png"  
+        action Skip() alternate Skip(fast=True, confirm=True)
+         
+
+    
+        
 
 style window:
     variant "small"
