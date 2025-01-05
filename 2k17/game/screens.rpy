@@ -235,29 +235,79 @@ style choice_button_text is default:
 ##
 ## Быстрое меню показывается внутри игры, чтобы обеспечить лёгкий доступ к
 ## внеигровым меню.
+#screen back_for:
 
+#    imagemap:
+
+#        idle"gui/back_for.png"
+#       hover"gui/back_for_hover.png"
+
+#        hotspot(0, 0, 396, 1080) action ShowMenu('history')
+#        hotspot(1594, 0, 396, 1080) action Skip() alternate Skip(fast=True, confirm=True)
+
+#screen back_for:
+#    imagebutton:
+#        xanchor 0.0
+#        yanchor 0.0
+#        xpos 0.0
+#        ypos 0.0
+#        idle "gui/back_for.png"  
+#        hover "gui/left_bar.png"  
+#        action ShowMenu("history")  
+        
+    
+#    imagebutton:
+#        xanchor 1.0
+#        yanchor 0.0
+#        xpos 1.0
+#        ypos 0.0
+#        idle "gui/back_for.png"  
+#        hover "gui/right_bar.png"  
+#        action Skip() alternate Skip(fast=True, confirm=True)
+screen history_bar:
+    add "gui/left_bar.png":
+        align (0.0,0.0)
+
+screen skip_bar:
+    add "gui/right_bar.png":
+        xanchor 1.0
+        yanchor 0.0
+        xpos 1.0
+        ypos 0.0
 screen quick_menu():
-
+    tag menu
+    modal False
     ## Гарантирует, что оно появляется поверх других экранов.
     zorder 100
 
     if quick_menu:
 
-        hbox:
-            style_prefix "quick"
+        style_prefix "quick"
 
-            xalign 0.5
-            yalign 1.0
+        imagebutton:
+            xanchor 0.0
+            yanchor 0.0
+            xpos 0.0
+            ypos 0.0
+            idle "gui/back_for.png"  
+            hover "gui/back_for.png"
+            hovered [Show("history_bar",transition=Dissolve(0.25))]
+            unhovered [Hide("history_bar", transition=Dissolve(0.5))]
+            action ShowMenu("history")  
 
-            textbutton _("Назад") action Rollback()
-            textbutton _("История") action ShowMenu('history')
-            textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Авто") action Preference("auto-forward", "toggle")
-            textbutton _("Сохранить") action ShowMenu('save')
-            textbutton _("Б.Сохр") action QuickSave()
-            textbutton _("Б.Загр") action QuickLoad()
-            textbutton _("Опции") action ShowMenu('preferences')
+        imagebutton:
+            xanchor 1.0
+            yanchor 0.0
+            xpos 1.0
+            ypos 0.0
+            idle "gui/back_for.png"  
+            hover "gui/right_bar.png"  
+            hovered [Show("skip_bar",transition=Dissolve(0.25))]
+            unhovered [Hide("skip_bar", transition=Dissolve(0.5))]
+            action Skip() alternate Skip(fast=True, confirm=True)
+        
 
+        
 
 ## Данный код гарантирует, что экран быстрого меню будет показан в игре в любое
 ## время, если только игрок не скроет интерфейс.
@@ -1523,40 +1573,7 @@ screen quick_menu():
             textbutton _("Пропуск") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Авто") action Preference("auto-forward", "toggle")
             textbutton _("Меню") action ShowMenu()
-
-#screen back_for:
-
-#    imagemap:
-
-#        idle"gui/back_for.png"
-#       hover"gui/back_for_hover.png"
-
-#        hotspot(0, 0, 396, 1080) action ShowMenu('history')
-#        hotspot(1594, 0, 396, 1080) action Skip() alternate Skip(fast=True, confirm=True)
-
-screen back_for:
-    imagebutton:
-        xanchor 0.0
-        yanchor 0.0
-        xpos 0.0
-        ypos 0.0
-        idle "gui/back_for.png"  
-        hover "gui/left_bar.png"  
-        action ShowMenu("history")  
-        
-    
-    imagebutton:
-        xanchor 1.0
-        yanchor 0.0
-        xpos 1.0
-        ypos 0.0
-        idle "gui/back_for.png"  
-        hover "gui/right_bar.png"  
-        action Skip() alternate Skip(fast=True, confirm=True)
-         
-
-    
-        
+   
 
 style window:
     variant "small"

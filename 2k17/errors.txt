@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1540: Line is indented, but the preceding ground statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    hotspot((0, 0, 396, 1080)):
+File "game/screens.rpy", line 303: Line is indented, but the preceding ypos statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    idle "gui/back_for.png"  
     ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Sun Jan  5 12:14:42 2025
+Sun Jan  5 14:41:38 2025
