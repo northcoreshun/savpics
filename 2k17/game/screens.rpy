@@ -267,6 +267,7 @@ style choice_button_text is default:
 screen history_bar:
     add "gui/left_bar.png":
         align (0.0,0.0)
+    add "gui/history_icon.png" xpos .15 ypos 1. anchor (1.0, 1.0)
 
 screen skip_bar:
     add "gui/right_bar.png":
@@ -274,6 +275,8 @@ screen skip_bar:
         yanchor 0.0
         xpos 1.0
         ypos 0.0
+    add "gui/skip_icon0.png" xpos 1.0 ypos 1. anchor (1.0, 1.0)
+
 screen quick_menu():
     tag menu
     modal False
@@ -292,7 +295,7 @@ screen quick_menu():
             idle "gui/back_for.png"  
             hover "gui/back_for.png"
             hovered [Show("history_bar",transition=Dissolve(0.25))]
-            unhovered [Hide("history_bar", transition=Dissolve(0.5))]
+            unhovered [Hide("history_bar", transition=Dissolve(0.5),)]
             action ShowMenu("history")  
 
         imagebutton:
@@ -301,7 +304,7 @@ screen quick_menu():
             xpos 1.0
             ypos 0.0
             idle "gui/back_for.png"  
-            hover "gui/right_bar.png"  
+            hover "gui/back_for.png"  
             hovered [Show("skip_bar",transition=Dissolve(0.25))]
             unhovered [Hide("skip_bar", transition=Dissolve(0.5))]
             action Skip() alternate Skip(fast=True, confirm=True)
@@ -1256,30 +1259,14 @@ screen skip_indicator():
     zorder 100
     style_prefix "skip"
 
-    frame:
-
-        hbox:
-            spacing 9
-
-            text _("Пропускаю")
-
-            text "▸" at delayed_blink(0.0, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.2, 1.0) style "skip_triangle"
-            text "▸" at delayed_blink(0.4, 1.0) style "skip_triangle"
+    add "gui/skip_icon.png" xpos 1.0 ypos 1.0 anchor (1.0, 1.0) at skip_animation
 
 
 ## Эта трансформация используется, чтобы мигать стрелками одна за другой.
-transform delayed_blink(delay, cycle):
-    alpha .5
-
-    pause delay
-
-    block:
-        linear .2 alpha 1.0
-        pause .2
-        linear .2 alpha 0.5
-        pause (cycle - .4)
-        repeat
+transform skip_animation:
+    linear 0.5 alpha 0.0  # Уменьшаем непрозрачность до 0 за 0.5 секунды
+    linear 0.5 alpha 1.0  # Увеличиваем непрозрачность до 1 за 0.5 секунды
+    repeat  # Повторяем анимацию
 
 
 style skip_frame is empty
