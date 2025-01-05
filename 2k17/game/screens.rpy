@@ -1543,6 +1543,7 @@ screen back_for:
         idle "gui/back_for.png"  
         hover "gui/left_bar.png"  
         action ShowMenu("history")  
+        
     
     imagebutton:
         xanchor 1.0

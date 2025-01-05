@@ -11,7 +11,7 @@ define s = Character('Сом', color="#cd6af5")
 # Игра начинается здесь:
 label start:
 
-    show screen back_for
+    show screen back_forw
     
     scene bg test
 
