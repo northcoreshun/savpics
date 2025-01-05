@@ -1,56 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens.rpy", line 279, in prepare_screen
-    screen quick_menu():
-  File "game/screens.rpy", line 279, in prepare
-    screen quick_menu():
-  File "game/screens.rpy", line 285, in prepare
-    if quick_menu:
-  File "game/screens.rpy", line 285, in prepare
-    if quick_menu:
-  File "game/screens.rpy", line 289, in prepare
-    imagebutton:
-  File "game/screens.rpy", line 289, in prepare
-    imagebutton:
-SyntaxError: positional argument follows keyword argument (game/screens.rpy, line 297)
+While running game code:
+  File "game/script.rpy", line 9, in script
+    "Как-то раз, в первые дни лета 2017 года в одну квартиру на юге Нижнего Новгорода постучались." with disolve
+  File "game/script.rpy", line 9, in <module>
+    "Как-то раз, в первые дни лета 2017 года в одну квартиру на юге Нижнего Новгорода постучались." with disolve
+NameError: name 'disolve' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\main.py", line 670, in main
-    run(restart)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\main.py", line 93, in run
-    renpy.display.screen.prepare_screens()
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\screen.py", line 1003, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens.rpy", line 279, in prepare_screen
-    screen quick_menu():
-  File "game/screens.rpy", line 279, in prepare
-    screen quick_menu():
-  File "game/screens.rpy", line 285, in prepare
-    if quick_menu:
-  File "game/screens.rpy", line 285, in prepare
-    if quick_menu:
-  File "game/screens.rpy", line 289, in prepare
-    imagebutton:
-  File "game/screens.rpy", line 289, in prepare
-    imagebutton:
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\py3analysis.py", line 808, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\py3analysis.py", line 790, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1088, in py_compile
-    raise e
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1034, in py_compile
-    raise orig_e
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1027, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: positional argument follows keyword argument (game/screens.rpy, line 297)
+  File "game/script.rpy", line 9, in script
+    "Как-то раз, в первые дни лета 2017 года в одну квартиру на юге Нижнего Новгорода постучались." with disolve
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ast.py", line 929, in execute
+    say_menu_with(self.with_, renpy.game.interface.set_transition)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ast.py", line 748, in say_menu_with
+    what = renpy.python.py_eval(expression)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
+    return py_eval_bytecode(code, globals, locals)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 9, in <module>
+    "Как-то раз, в первые дни лета 2017 года в одну квартиру на юге Нижнего Новгорода постучались." with disolve
+NameError: name 'disolve' is not defined
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.1.3.23091805
 2k17 1.0
-Sun Jan  5 16:20:49 2025
+Sun Jan  5 19:46:25 2025

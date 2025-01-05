@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1268: expected a keyword argument or child statement.
-    "gui/skip_icon1.png" at delayed_blink(0.0, 1.0) style "skip_triangle"
-    ^
+File "game/script.rpy", line 9: expected end of line
+    window show with dissolve
+                ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Sun Jan  5 16:01:17 2025
+Sun Jan  5 19:48:07 2025

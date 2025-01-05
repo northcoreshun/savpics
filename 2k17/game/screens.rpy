@@ -1,7 +1,8 @@
-﻿################################################################################
+################################################################################
 ## Инициализация
 ################################################################################
 
+        
 init offset = -1
 
 
@@ -130,13 +131,15 @@ style namebox is default
 style namebox_label is say_label
 
 
+
 style window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
+    background "#000" # Замулевка всего в хлам
+    padding Borders(10, 10, 10, 10).padding # если что убрать
 
-    #background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
 
 style namebox:
     xpos gui.name_xpos
@@ -144,15 +147,15 @@ style namebox:
     xsize gui.namebox_width
     ypos gui.name_ypos
     ysize gui.namebox_height
+    background "#000"
+    padding Borders(10, 10, 10, 10).padding
 
-    #background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
-    #padding gui.namebox_borders.padding
 
 style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
     yalign 0.5
-
+    
 style say_dialogue:
     properties gui.text_properties("dialogue")
 
@@ -160,8 +163,11 @@ style say_dialogue:
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos
 
-    adjust_spacing False
+    
 
+    adjust_spacing False
+    #background "#000"
+        #padding Borders(24, 20, 24, 20).padding
 ## Экран ввода #################################################################
 ##
 ## Этот экран используется, чтобы показывать renpy.input. Это параметр запроса,
@@ -267,7 +273,8 @@ style choice_button_text is default:
 screen history_bar:
     add "gui/left_bar.png":
         align (0.0,0.0)
-    add "gui/history_icon.png" xpos .15 ypos 1. anchor (1.0, 1.0)
+    add "gui/history_icon.png" xpos .15 ypos .96 anchor (1.0, 1.0)
+    text "История" size 20 align(.04,.8)
 
 screen skip_bar:
     add "gui/right_bar.png":
@@ -276,6 +283,7 @@ screen skip_bar:
         xpos 1.0
         ypos 0.0
     add "gui/skip_icon0.png" xpos 1.0 ypos 1. anchor (1.0, 1.0)
+    text "Пропуск" size 20 align(.94,.8)
 
 screen quick_menu():
     tag menu
