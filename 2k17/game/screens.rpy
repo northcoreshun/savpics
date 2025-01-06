@@ -137,8 +137,8 @@ style window:
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
-    background "#000" # Замулевка всего в хлам
-    padding Borders(10, 10, 10, 10).padding # если что убрать
+    #background "#000" # Замулевка всего в хлам
+    #padding Borders(10, 10, 10, 10).padding # если что убрать
 
 
 style namebox:
@@ -315,7 +315,7 @@ screen quick_menu():
             hover "gui/back_for.png"  
             hovered [Show("skip_bar",transition=Dissolve(0.25))]
             unhovered [Hide("skip_bar", transition=Dissolve(0.5))]
-            action Skip() alternate Skip(fast=True, confirm=True)
+            action Skip() 
         
 
         
