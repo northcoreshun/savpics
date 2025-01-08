@@ -1,4 +1,4 @@
-Mon Jan  6 19:29:32 2025
+Wed Jan  8 18:25:00 2025
 Windows-10-10.0.19044
 Ren'Py 8.1.3.23091805
  
@@ -6,16 +6,17 @@ Ren'Py 8.1.3.23091805
 Bootstrap to the start of init.init. took 0.07s
 Early init. took 0.00s
 Loader init. took 0.03s
-Loading error handling. took 0.04s
-Loading script. took 0.17s
+Loading error handling. took 0.05s
+Loading script. took 0.66s
 Loading save slot metadata. took 0.05s
 Loading persistent. took 0.00s
-Running init code. took 0.07s
+Running init code. took 0.10s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
 Index archives took 0.00s
-Dump and make backups. took 0.09s
+Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
+Dump and make backups. took 0.10s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
 Initial gc. took 0.02s
@@ -25,61 +26,16 @@ nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.04s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.14s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 16.08s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.04s
-Loading script. took 0.23s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.04s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
+Build styles took 0.01s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.03s
-Prepare screens took 0.10s
+Prepare screens took 0.12s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.03s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.04s
+Interface start. took 0.13s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1366, 768)
@@ -92,14 +48,14 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 75.94s
+Bootstrap to the start of init.init. took 48.66s
 Early init. took 0.00s
 Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.21s
-Loading save slot metadata. took 0.03s
+Loading error handling. took 0.04s
+Loading script. took 0.36s
+Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
-Running init code. took 0.05s
+Running init code. took 0.06s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
@@ -120,7 +76,7 @@ Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.02s
 Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.02s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
@@ -137,239 +93,14 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 98.94s
+Bootstrap to the start of init.init. took 79.42s
 Early init. took 0.00s
 Loader init. took 0.03s
 Loading error handling. took 0.03s
-Loading script. took 0.40s
+Loading script. took 0.38s
 Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
 Running init code. took 0.04s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 112.82s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.16s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.05s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 117.66s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.21s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.05s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.02s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 154.31s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.22s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.05s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 171.29s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.21s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.05s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.05s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 1677.34s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.21s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.05s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
@@ -385,12 +116,12 @@ nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.05s
-Build styles took 0.00s
+Build styles took 0.01s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.03s
 Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
+Save pyanalysis. took 0.02s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
@@ -406,19 +137,15 @@ Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
 Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1366, 705) drawable=(1366, 705)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 1944.57s
+Bootstrap to the start of init.init. took 119.77s
 Early init. took 0.00s
 Loader init. took 0.03s
 Loading error handling. took 0.03s
-Loading script. took 0.21s
+Loading script. took 0.37s
 Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
-Running init code. took 0.05s
+Running init code. took 0.04s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
@@ -456,14 +183,156 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 1954.16s
+Bootstrap to the start of init.init. took 156.79s
 Early init. took 0.00s
 Loader init. took 0.03s
 Loading error handling. took 0.03s
-Loading script. took 0.21s
+Loading script. took 0.37s
 Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
-Running init code. took 0.05s
+Running init code. took 0.04s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
+Dump and make backups. took 0.09s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon HD 5800 Series'
+Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 4055, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 684, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 4055, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 649, in execute
+    screen load():
+  File "game/screens.rpy", line 649, in execute
+    screen load():
+  File "game/screens.rpy", line 653, in execute
+    use file_slots()
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ast.py", line 232, in apply
+    raise TypeError(
+TypeError: Missing required positional arguments: 'title'
+
+While running game code:
+  File "renpy/common/00gamemenu.rpy", line 174, in script
+    $ ui.interact()
+  File "renpy/common/00gamemenu.rpy", line 174, in <module>
+    $ ui.interact()
+  File "game/screens.rpy", line 649, in execute
+    screen load():
+  File "game/screens.rpy", line 649, in execute
+    screen load():
+  File "game/screens.rpy", line 653, in execute
+    use file_slots()
+TypeError: Missing required positional arguments: 'title'
+Resetting cache.
+Bootstrap to the start of init.init. took 166.29s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.03s
+Loading script. took 0.39s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+Running init code. took 0.04s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
+Dump and make backups. took 0.09s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.03s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon HD 5800 Series'
+Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 174.17s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.03s
+Loading script. took 0.37s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+Running init code. took 0.04s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
@@ -501,64 +370,18 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 2234.72s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.42s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.04s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.13s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 2360.12s
+Bootstrap to the start of init.init. took 179.03s
 Early init. took 0.00s
 Loader init. took 0.04s
 Loading error handling. took 0.03s
-Loading script. took 0.23s
-Loading save slot metadata. took 0.03s
+Loading script. took 0.16s
+Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
 Running init code. took 0.05s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
 Dump and make backups. took 0.09s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
@@ -569,68 +392,16 @@ nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.05s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Cleaning stores took 0.00s
-Init translation took 0.00s
-Build styles took 0.01s
+Build styles took 0.00s
 Load screen analysis took 0.04s
 Analyze screens took 0.00s
-Prepare screens took 0.00s
-Running _start took 0.00s
-Resetting cache.
-Bootstrap to the start of init.init. took 2432.35s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.19s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.05s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.05s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
+Save screen analysis took 0.00s
 Prepare screens took 0.11s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start. took 0.05s
+Interface start. took 0.06s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1366, 768)
@@ -643,52 +414,7 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 2463.29s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.48s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.04s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.02s
-Prepare screens took 0.14s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 3335.49s
+Bootstrap to the start of init.init. took 398.37s
 Early init. took 0.00s
 Loader init. took 0.03s
 Loading error handling. took 0.03s
@@ -711,10 +437,10 @@ nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.05s
-Build styles took 0.00s
+Build styles took 0.01s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
-Save screen analysis took 0.03s
+Save screen analysis took 0.02s
 Prepare screens took 0.11s
 Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
@@ -733,52 +459,7 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 3348.04s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.21s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.06s
-Loading analysis data. took 0.03s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 3752.85s
+Bootstrap to the start of init.init. took 631.36s
 Early init. took 0.00s
 Loader init. took 0.03s
 Loading error handling. took 0.03s
@@ -791,20 +472,20 @@ Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
+Dump and make backups. took 0.11s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.04s
+Initial gc. took 0.06s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.05s
+Init translation took 0.06s
 Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
-Save screen analysis took 0.02s
+Save screen analysis took 0.03s
 Prepare screens took 0.13s
 Save pyanalysis. took 0.02s
 Save bytecode. took 0.02s
@@ -823,11 +504,11 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 3794.30s
+Bootstrap to the start of init.init. took 726.86s
 Early init. took 0.00s
 Loader init. took 0.03s
 Loading error handling. took 0.03s
-Loading script. took 0.36s
+Loading script. took 0.37s
 Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
 Running init code. took 0.04s
@@ -868,7 +549,7 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 3848.16s
+Bootstrap to the start of init.init. took 1144.02s
 Early init. took 0.00s
 Loader init. took 0.03s
 Loading error handling. took 0.03s
@@ -878,10 +559,10 @@ Loading persistent. took 0.00s
 Running init code. took 0.04s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
+Reloading save slot metadata. took 0.05s
 Index archives took 0.00s
 Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
+Dump and make backups. took 0.11s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
 Initial gc. took 0.04s
@@ -891,7 +572,7 @@ nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.05s
-Build styles took 0.00s
+Build styles took 0.01s
 Load screen analysis took 0.00s
 Analyze screens took 0.02s
 Save screen analysis took 0.03s
@@ -913,149 +594,14 @@ Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 3866.80s
+Bootstrap to the start of init.init. took 1178.03s
 Early init. took 0.00s
-Loader init. took 0.03s
+Loader init. took 0.04s
 Loading error handling. took 0.03s
-Loading script. took 0.42s
+Loading script. took 0.36s
 Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
 Running init code. took 0.04s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.02s
-Prepare screens took 0.13s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 3914.24s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.20s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.05s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 3939.02s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.20s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.05s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Никита\\AppData\\Roaming/RenPy/backups\\2k17':
-Dump and make backups. took 0.09s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.01s
-Load screen analysis took 0.00s
-Analyze screens took 0.02s
-Save screen analysis took 0.03s
-Prepare screens took 0.11s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.02s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.05s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1366, 768)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon HD 5800 Series'
-Version: b'4.5.13399 Compatibility Profile Context 15.200.1062.1004'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1182, 665) drawable=(1182, 665)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 3950.13s
-Early init. took 0.00s
-Loader init. took 0.03s
-Loading error handling. took 0.03s
-Loading script. took 0.20s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.05s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s

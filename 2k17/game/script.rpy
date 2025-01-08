@@ -1,4 +1,7 @@
-﻿
+﻿init python:
+    renpy.music.register_channel("bgs_channel", "sfx", True, True)
+    #_game_menu_screen = "preferences"
+
 define nas = Character('Настя', color="#7ef17e")
 define kat = Character('Катя', color="#cd6af5" )
 define leh = Character('Лёша', color="#3bb1ff" )

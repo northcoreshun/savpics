@@ -48,7 +48,7 @@ define build.name = "2k17"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## Чтобы разрешить игроку тестировать громкость на звуковом или голосовом
@@ -121,7 +121,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## в то время как любая другая цифра — это количество символов, печатаемых в
 ## секунду.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 45
 
 
 ## Стандартная задержка авточтения. Большие значения означают долгие ожидания, а
@@ -179,7 +179,7 @@ init python:
     ## "**.psd" берёт все файлы psd из любого места проекта.
 
     ## Классифицируйте файлы как None, чтобы исключить их из дистрибутивов.
-
+    
     build.classify('**~', None)
     build.classify('**.bak', None)
     build.classify('**/.**', None)
@@ -209,3 +209,8 @@ init python:
 ## разделённые дробью.
 
 # define build.itch_project = "renpytom/test-project"
+
+
+define config.default_music_volume = 0.5 #где 0.5 = 50% громкости
+define config.default_sfx_volume = 0.5
+define config.mouse_hide_time = 10
