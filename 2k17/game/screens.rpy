@@ -348,55 +348,59 @@ style quick_button_text:
 
 screen navigation():
 
-    hbox:
-        style_prefix "navigation"
-
-        xpos gui.navigation_xpos
+    frame:
+        background "#000000"
+        xpos 100
         yalign 0.05
+        hbox:
+            style_prefix "navigation"
+            
+            
+            xsize 1720
+            
 
-        spacing gui.navigation_spacing
+            if main_menu:
+                
+                textbutton _("Начать") action Start()
 
-        if main_menu:
+            else:
+                textbutton _("История") action ShowMenu("history")
+                    
 
-            textbutton _("Начать") action Start()
+                textbutton _("Сохранить") action ShowMenu("save")
+                    
 
-        else:
+            textbutton _("Загрузить") action ShowMenu("load")
 
-            textbutton _("История") action ShowMenu("history")
+            textbutton _("Настройки") action ShowMenu("preferences")
 
-            textbutton _("Сохранить") action ShowMenu("save")
+            if _in_replay:
 
-        textbutton _("Загрузить") action ShowMenu("load")
+                textbutton _("Завершить повтор") action EndReplay(confirm=True)
 
-        textbutton _("Настройки") action ShowMenu("preferences")
+            elif not main_menu:
 
-        if _in_replay:
+                textbutton _("Главное меню") action MainMenu()
 
-            textbutton _("Завершить повтор") action EndReplay(confirm=True)
+            textbutton _("Об игре") action ShowMenu("about")
 
-        elif not main_menu:
+            if renpy.variant("pc"):
 
-            textbutton _("Главное меню") action MainMenu()
-
-        textbutton _("Об игре") action ShowMenu("about")
-
-        if renpy.variant("pc"):
-
-            ## Кнопка выхода блокирована в iOS и не нужна на Android и в веб-
-            ## версии.
-            textbutton _("Выход") action Quit(confirm=not main_menu)
+                ## Кнопка выхода блокирована в iOS и не нужна на Android и в веб-
+                ## версии.
+                textbutton _("Выход") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
 
 style navigation_button:
-    size_group "navigation"
+    
     properties gui.button_properties("navigation_button")
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
-
+    size 25
 
 ## Экран главного меню #########################################################
 ##
@@ -485,9 +489,9 @@ screen game_menu(title, scroll=None, yinitial=0.0):
         hbox:
             frame:
                 style "game_menu_content_frame"
-
+                
                 if scroll == "viewport":
-
+                        
                     viewport:
                         yinitial yinitial
                         scrollbars "vertical"
@@ -744,13 +748,13 @@ style page_label_text:
     textalign 0.5
     layout "subtitle"
     hover_color gui.hover_color
-
+    
 style page_button:
     properties gui.button_properties("page_button")
 
 style page_button_text:
     properties gui.button_text_properties("page_button")
-
+    size 25
 style slot_button:
     properties gui.button_properties("slot_button")
 

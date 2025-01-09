@@ -123,6 +123,9 @@ define config.window_hide_transition = Dissolve(.2)
 
 default preferences.text_cps = 45
 
+define config.default_music_volume = 0.5 #где 0.5 = 50% громкости
+define config.default_sfx_volume = 0.5
+define config.mouse_hide_time = 10
 
 ## Стандартная задержка авточтения. Большие значения означают долгие ожидания, а
 ## от 0 до 30 — вполне допустимый диапазон.
@@ -211,6 +214,3 @@ init python:
 # define build.itch_project = "renpytom/test-project"
 
 
-define config.default_music_volume = 0.5 #где 0.5 = 50% громкости
-define config.default_sfx_volume = 0.5
-define config.mouse_hide_time = 10

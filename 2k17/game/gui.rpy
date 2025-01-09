@@ -202,7 +202,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## именованные переменные. Например, вы можете раскомментировать следующую
 ## строчку, чтобы установить ширину кнопок навигации.
 
-define gui.navigation_button_width = 260
+#define gui.navigation_button_width = 270
 
 
 ## Кнопки Выбора ###############################################################
