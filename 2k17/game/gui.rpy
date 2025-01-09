@@ -26,7 +26,7 @@ define config.check_conflicting_properties = True
 ## Цвета текста в интерфейсе.
 
 ## Акцентный цвет используется в заголовках и подчёркнутых текстах.
-define gui.accent_color = '#0099cc'
+define gui.accent_color = '#aaaaaa'
 
 ## Цвет, используемый в текстовой кнопке, когда она не выбрана и не наведена.
 define gui.idle_color = '#888888'
@@ -36,7 +36,7 @@ define gui.idle_color = '#888888'
 define gui.idle_small_color = '#aaaaaa'
 
 ## Цвет, используемых в кнопках и панелях, когда они наведены.
-define gui.hover_color = '#66c1e0'
+define gui.hover_color = '#ffffff'
 
 ## Цвет, используемый текстовой кнопкой, когда она выбрана, но не наведена.
 ## Кнопка может быть выбрана, если это текущий экран или текущее значение
@@ -65,7 +65,7 @@ define gui.text_font = "PressStart2P-Regular.ttf"
 define gui.name_text_font = "PressStart2P-Regular.ttf"
 
 ## Шрифт, используемый текстом вне игры.
-define gui.interface_text_font = "DejaVuSans.ttf"
+define gui.interface_text_font = "PressStart2P-Regular.ttf"
 
 ## Размер нормального текста диалога.
 define gui.text_size = 25
@@ -74,7 +74,7 @@ define gui.text_size = 25
 define gui.name_text_size = 30
 
 ## Размер текста в пользовательском интерфейсе.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 20
 
 ## Размер заголовков в пользовательском интерфейсе.
 define gui.label_text_size = 36
@@ -90,7 +90,7 @@ define gui.title_text_size = 75
 
 ## Изображения, используемые в главном и игровом меню.
 define gui.main_menu_background = "gui/main_menu.png"
-define gui.game_menu_background = "gui/game_menu.png"
+define gui.game_menu_background = "gui/ground.png"
 
 
 ## Диалог ######################################################################
@@ -202,7 +202,7 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## именованные переменные. Например, вы можете раскомментировать следующую
 ## строчку, чтобы установить ширину кнопок навигации.
 
-# define gui.navigation_button_width = 250
+define gui.navigation_button_width = 260
 
 
 ## Кнопки Выбора ###############################################################
@@ -231,7 +231,7 @@ define gui.choice_button_text_insensitive_color = '#8888887f'
 define gui.slot_button_width = 414
 define gui.slot_button_height = 309
 define gui.slot_button_borders = Borders(15, 15, 15, 15)
-define gui.slot_button_text_size = 21
+define gui.slot_button_text_size = 18
 define gui.slot_button_text_xalign = 0.5
 define gui.slot_button_text_idle_color = gui.idle_small_color
 define gui.slot_button_text_selected_idle_color = gui.selected_color
@@ -347,7 +347,7 @@ define config.history_length = 250
 
 ## Высота доступных записей на экране истории, или None, чтобы задать высоту в
 ## зависимости от производительности.
-define gui.history_height = 210
+define gui.history_height = 100
 
 ## Местоположение, ширина и выравнивание заголовка, показывающего имя говорящего
 ## персонажа.
@@ -359,7 +359,7 @@ define gui.history_name_xalign = 1.0
 ## Местоположение, ширина и выравнивание диалогового текста.
 define gui.history_text_xpos = 255
 define gui.history_text_ypos = 3
-define gui.history_text_width = 1110
+define gui.history_text_width = 1500
 define gui.history_text_xalign = 0.0
 
 

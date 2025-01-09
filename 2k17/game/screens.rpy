@@ -348,11 +348,11 @@ style quick_button_text:
 
 screen navigation():
 
-    vbox:
+    hbox:
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.5
+        yalign 0.05
 
         spacing gui.navigation_spacing
 
@@ -483,11 +483,6 @@ screen game_menu(title, scroll=None, yinitial=0.0):
         style "game_menu_outer_frame"
 
         hbox:
-
-            ## Резервирует пространство для навигации.
-            frame:
-                style "game_menu_navigation_frame"
-
             frame:
                 style "game_menu_content_frame"
 
@@ -554,16 +549,18 @@ style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
 
-    background "gui/overlay/game_menu.png"
+    background "gui/black.png"
 
 style game_menu_navigation_frame:
     xsize 420
     yfill True
+    background "#ffff"
 
 style game_menu_content_frame:
     left_margin 60
     right_margin 30
     top_margin 15
+    ysize 820
 
 style game_menu_viewport:
     xsize 1380
@@ -654,8 +651,9 @@ screen file_slots(title):
 
     use game_menu(title):
 
-        fixed:
 
+        fixed:
+            
             ## Это гарантирует, что ввод будет принимать enter перед остальными
             ## кнопками.
             order_reverse True
@@ -723,7 +721,7 @@ screen file_slots(title):
                     for page in range(1, 2):
                         textbutton "Сохры" action FilePage(page)
 
-                
+                #add "gui/white.png"
 
                 
 
@@ -933,7 +931,7 @@ screen history():
     ## массивным.
     predict False
 
-    use game_menu(_(""), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=1.0):
+    use game_menu(_(""), scroll=("vpgrid" if gui.history_height else "viewport"), yinitial=0.5):
 
         style_prefix "history"
 
@@ -951,11 +949,12 @@ screen history():
                     label h.who:
                         style "history_name"
                         substitute False
-
+                        
                         ## Берёт цвет из who параметра персонажа, если он
                         ## установлен.
                         if "color" in h.who_args:
                             text_color h.who_args["color"]
+                            
 
                 $ what = renpy.filter_text_tags(h.what, allow=gui.history_allow_tags)
                 text what:
@@ -989,9 +988,12 @@ style history_name:
     ypos gui.history_name_ypos
     xsize gui.history_name_width
 
+style history_name_text is gui_label_text
+
 style history_name_text:
     min_width gui.history_name_width
     textalign gui.history_name_xalign
+    size 25  # Установите нужный размер шрифта здесь
 
 style history_text:
     xpos gui.history_text_xpos
