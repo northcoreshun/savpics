@@ -108,8 +108,21 @@ screen say(who, what):
                 style "namebox"
                 text who id "who"
 
-        text what id "what"
+        # Определяем количество строк в тексте
+        $ line_count = len(what.splitlines())
 
+        window:
+            id "textbox"
+            # Выбор стиля в зависимости от количества строк
+            if line_count == 1:
+                style "textbox_small"
+            elif line_count == 2:
+                style "textbox_medium"
+            elif line_count == 3:
+                style "textbox_large"
+            else:
+                style "textbox_extralarge" 
+            text what id "what"
 
     ## Если есть боковое изображение ("голова"), показывает её поверх текста.
     ## По стандарту не показывается на варианте для мобильных устройств — мало
@@ -130,17 +143,40 @@ style say_thought is say_dialogue
 style namebox is default
 style namebox_label is say_label
 
+style textbox_small:
+    xalign 0.5
+    yalign 0.5  
+    ypos gui.dialogue_ypos
+    background "#000"
+    padding (20, 20, 20, 30)
 
+style textbox_medium:
+    xalign 0.5 
+    yalign 0.5  
+    ypos gui.dialogue_ypos
+    background "#000"
+    padding (20, 10, 20, 50)  
+
+style textbox_large:
+    xalign 0.5  
+    yalign 0.5  
+    ypos gui.dialogue_ypos
+    background "#000"
+    padding (20, 20, 20, 85)  
+
+style textbox_extralarge:
+    xalign 0.5
+    yalign 0.5  
+    ypos gui.dialogue_ypos
+    background "#000"
+    padding (20,20, 20, 20) 
 
 style window:
     xalign 0.5
     xfill True
     yalign gui.textbox_yalign
     ysize gui.textbox_height
-    #background "#000" # Замулевка всего в хлам
-    #padding Borders(10, 10, 10, 10).padding # если что убрать
-
-
+ 
 style namebox:
     xpos gui.name_xpos
     xanchor gui.name_xalign
@@ -150,7 +186,6 @@ style namebox:
     background "#000"
     padding Borders(10, 10, 10, 10).padding
 
-
 style say_label:
     properties gui.text_properties("name", accent=True)
     xalign gui.name_xalign
@@ -158,16 +193,10 @@ style say_label:
     
 style say_dialogue:
     properties gui.text_properties("dialogue")
-
     xpos gui.dialogue_xpos
-    xsize gui.dialogue_width
     ypos gui.dialogue_ypos
-
-    
-
     adjust_spacing False
-    #background "#000"
-        #padding Borders(24, 20, 24, 20).padding
+    line_spacing 10
 ## Экран ввода #################################################################
 ##
 ## Этот экран используется, чтобы показывать renpy.input. Это параметр запроса,
