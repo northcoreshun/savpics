@@ -162,14 +162,14 @@ style textbox_large:
     yalign 0.5  
     ypos gui.dialogue_ypos
     background "#000"
-    padding (20, 20, 20, 85)  
+    padding (20, -15, 20, 70)  
 
 style textbox_extralarge:
     xalign 0.5
     yalign 0.5  
     ypos gui.dialogue_ypos
     background "#000"
-    padding (20,20, 20, 20) 
+    padding (20, -20, 20, 90) 
 
 style window:
     xalign 0.5
@@ -270,35 +270,7 @@ style choice_button_text is default:
 ##
 ## Быстрое меню показывается внутри игры, чтобы обеспечить лёгкий доступ к
 ## внеигровым меню.
-#screen back_for:
 
-#    imagemap:
-
-#        idle"gui/back_for.png"
-#       hover"gui/back_for_hover.png"
-
-#        hotspot(0, 0, 396, 1080) action ShowMenu('history')
-#        hotspot(1594, 0, 396, 1080) action Skip() alternate Skip(fast=True, confirm=True)
-
-#screen back_for:
-#    imagebutton:
-#        xanchor 0.0
-#        yanchor 0.0
-#        xpos 0.0
-#        ypos 0.0
-#        idle "gui/back_for.png"  
-#        hover "gui/left_bar.png"  
-#        action ShowMenu("history")  
-        
-    
-#    imagebutton:
-#        xanchor 1.0
-#        yanchor 0.0
-#        xpos 1.0
-#        ypos 0.0
-#        idle "gui/back_for.png"  
-#        hover "gui/right_bar.png"  
-#        action Skip() alternate Skip(fast=True, confirm=True)
 screen history_bar:
     add "gui/left_bar.png":
         align (0.0,0.0)
@@ -596,7 +568,7 @@ style game_menu_content_frame:
     ysize 820
 
 style game_menu_viewport:
-    xsize 1380
+    xsize 1700
 
 style game_menu_vscrollbar:
     unscrollable gui.unscrollable
@@ -635,17 +607,20 @@ screen about():
     use game_menu(_(""), scroll="viewport"):
 
         style_prefix "about"
-
+        
         vbox:
-
-            label "[config.name!t]"
-            text _("Версия [config.version!t]\n")
+            spacing gui.pref_spacing
+            align (0.5, 0.5)
+            label "[config.name!t]" align (0.5, 0.5)
+            text _("Версия [config.version!t]\n") align (0.5, 0.5)
 
             ## gui.about обычно установлено в options.rpy.
             if gui.about:
-                text "[gui.about!t]\n"
-
-            text _("Сделано с помощью {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+                text "[gui.about!t]\n"align (0.5, 0.5)
+                
+            text _("Сделано с помощью {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]") align (0.5, 0.5)
+            
+                
 
 
 style about_label is gui_label
@@ -802,40 +777,48 @@ screen preferences():
     tag menu
 
     use game_menu(_(""), scroll="viewport"):
-
-        vbox:
-
-            hbox:
+        
+        hbox:
+            xpos 400
+            vbox:
+                xsize 400
                 box_wrap True
-
+                spacing gui.pref_spacing
                 if renpy.variant("pc") or renpy.variant("web"):
 
                     vbox:
                         style_prefix "radio"
                         label _("Режим экрана")
-                        textbutton _("Оконный") action Preference("display", "window")
-                        textbutton _("Полный") action Preference("display", "fullscreen")
+                        spacing gui.pref_spacing2
+                        vbox:
+                            spacing gui.pref_spacing2
+                            textbutton _("Оконный") action Preference("display", "window")
+                            textbutton _("Полный") action Preference("display", "fullscreen")
 
                 vbox:
                     style_prefix "check"
                     label _("Пропуск")
-                    textbutton _("Всего текста") action Preference("skip", "toggle")
-                    textbutton _("После выборов") action Preference("after choices", "toggle")
-                    textbutton _("Переходов") action InvertSelected(Preference("transitions", "toggle"))
+                    spacing gui.pref_spacing2
+                    vbox:
+                        spacing gui.pref_spacing2
+                        textbutton _("Всего текста") action Preference("skip", "toggle")
+                        textbutton _("После выборов") action Preference("after choices", "toggle")
+                        textbutton _("Переходов") action InvertSelected(Preference("transitions", "toggle"))
 
                 ## Дополнительные vbox'ы типа "radio_pref" или "check_pref"
                 ## могут быть добавлены сюда для добавления новых настроек.
 
             null height (4 * gui.pref_spacing)
 
-            hbox:
+            vbox:
                 style_prefix "slider"
+                
                 box_wrap True
 
                 vbox:
 
                     label _("Скорость текста")
-
+                    spacing gui.pref_spacing2
                     bar value Preference("text speed")
 
                     label _("Скорость авточтения")
@@ -846,7 +829,7 @@ screen preferences():
 
                     if config.has_music:
                         label _("Громкость музыки")
-
+                        spacing gui.pref_spacing2
                         hbox:
                             bar value Preference("music volume")
 

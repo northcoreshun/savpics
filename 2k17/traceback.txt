@@ -1,11 +1,19 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 After initialization, but before game start.
-  File "renpy/common/00start.rpy", line 83, in _init_language
-    renpy.change_language(language)
-  File "game/screens.rpy", line 147, in <module>
-    xsize len(what)
-NameError: name 'what' is not defined
+  File "game/screens.rpy", line 601, in prepare_screen
+    screen about():
+  File "game/screens.rpy", line 601, in prepare
+    screen about():
+  File "game/screens.rpy", line 607, in prepare
+    use game_menu(_(""), scroll="viewport"):
+  File "game/screens.rpy", line 607, in prepare
+    use game_menu(_(""), scroll="viewport"):
+  File "game/screens.rpy", line 611, in prepare
+    vbox:
+  File "game/screens.rpy", line 611, in prepare
+    vbox:
+SyntaxError: invalid syntax (game/screens.rpy, line 613)
 
 -- Full Traceback ------------------------------------------------------------
 
@@ -14,27 +22,35 @@ Full traceback:
     renpy.main.main()
   File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\main.py", line 670, in main
     run(restart)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\main.py", line 74, in run
-    renpy.translation.init_translation()
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\translation\__init__.py", line 593, in init_translation
-    renpy.store._init_language() # type: ignore
-  File "renpy/common/00start.rpy", line 83, in _init_language
-    renpy.change_language(language)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\translation\__init__.py", line 685, in change_language
-    new_change_language(tl, language)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\translation\__init__.py", line 639, in new_change_language
-    i.apply()
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ast.py", line 2974, in apply
-    value = renpy.python.py_eval(expr)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1153, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1146, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/screens.rpy", line 147, in <module>
-    xsize len(what)
-NameError: name 'what' is not defined
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\main.py", line 93, in run
+    renpy.display.screen.prepare_screens()
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\screen.py", line 1003, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/screens.rpy", line 601, in prepare_screen
+    screen about():
+  File "game/screens.rpy", line 601, in prepare
+    screen about():
+  File "game/screens.rpy", line 607, in prepare
+    use game_menu(_(""), scroll="viewport"):
+  File "game/screens.rpy", line 607, in prepare
+    use game_menu(_(""), scroll="viewport"):
+  File "game/screens.rpy", line 611, in prepare
+    vbox:
+  File "game/screens.rpy", line 611, in prepare
+    vbox:
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\py3analysis.py", line 808, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\py3analysis.py", line 790, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1088, in py_compile
+    raise e
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1034, in py_compile
+    raise orig_e
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1027, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/screens.rpy, line 613)
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.1.3.23091805
 Сохры 1.0
-Fri Jan 10 22:29:31 2025
+Sun Jan 12 23:06:23 2025

@@ -269,7 +269,8 @@ define gui.choice_spacing = 33
 define gui.navigation_spacing = 6
 
 ## Контролирует интервал между настройками.
-define gui.pref_spacing = 15
+define gui.pref_spacing = 50
+define gui.pref_spacing2 = 20
 
 ## Контролирует интервал между кнопками настройки.
 define gui.pref_button_spacing = 0
@@ -369,39 +370,39 @@ define gui.history_text_xalign = 0.0
 ## Экран режима NVL показывает диалог NVL персонажей.
 
 ## Границы фона окна NVL.
-define gui.nvl_borders = Borders(0, 15, 0, 30)
+define gui.nvl_borders = Borders(0, 30, 0, 30)
 
 ## Максимальное число показываемых строк в режиме NVL. Когда количество строчек
 ## начинает превышать это значение, старые строчки очищаются.
-define gui.nvl_list_length = 6
+define gui.nvl_list_length = 8
 
 ## Высота доступных строчек в режиме NVL. Установите на None, чтобы строчки
 ## динамически регулировали свою высоту.
-define gui.nvl_height = 173
+define gui.nvl_height = None
 
 ## Интервал между строчками в режиме NVL, если gui.nvl_height имеет значение
 ## None, а также между строчками и меню режима NVL.
-define gui.nvl_spacing = 15
+define gui.nvl_spacing = 10
 
 ## Местоположение, ширина и выравнивание заголовка, показывающего имя говорящего
 ## персонажа.
-define gui.nvl_name_xpos = 645
+define gui.nvl_name_xpos = 1000
 define gui.nvl_name_ypos = 0
 define gui.nvl_name_width = 225
-define gui.nvl_name_xalign = 1.0
+define gui.nvl_name_xalign = 0.0
 
 ## Местоположение, ширина и выравнивание диалогового текста.
-define gui.nvl_text_xpos = 675
-define gui.nvl_text_ypos = 12
-define gui.nvl_text_width = 885
-define gui.nvl_text_xalign = 0.0
+define gui.nvl_text_xpos = 1440
+define gui.nvl_text_ypos = 60
+define gui.nvl_text_width = 700
+define gui.nvl_text_xalign = 0.5
 
 ## Местоположение, ширина и выравнивание текста nvl_thought (текст от лица
 ## персонажа nvl_narrator).
-define gui.nvl_thought_xpos = 360
+define gui.nvl_thought_xpos = 1440
 define gui.nvl_thought_ypos = 0
-define gui.nvl_thought_width = 1170
-define gui.nvl_thought_xalign = 0.0
+define gui.nvl_thought_width = 700
+define gui.nvl_thought_xalign = 0.5
 
 ## Местоположение кнопок меню NVL.
 define gui.nvl_button_xpos = 675
