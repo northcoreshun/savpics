@@ -1,5 +1,15 @@
 ﻿init python:
-    renpy.music.register_channel("bgs_channel", "sfx", True, True)
+    renpy.music.register_channel("sfx1",loop=True)
+
+    sprite_path = "Sprites/"
+    sound_path = "audio/sounds/"
+    music_path = "audio/music/"
+    ambient_path = "audio/ambient/"
+    image_bg_path = "BackGrounds/"
+    image_cg_path = "Cg/"
+    fonts_path = "Fonts/"
+    
+define gorod = music_path+"gorod.mp3"
 
 
 define nas = Character('Настя', color="#7ef17e")
@@ -9,31 +19,41 @@ define dim = Character('Дима', color="#d84b4b" )
 define gol = Character('Голос', color = "#7a2f2f")
 define andr = Character('Андрей', color ="#4d1ecf")
 
-
+define nn = Character(None, kind=nvl)
 define nasn = Character('Настя',kind=nvl, color="#7ef17e")
 define katn = Character('Катя',kind=nvl, color="#cd6af5" )
 define lehn = Character('Лёша',kind=nvl, color="#3bb1ff" )
 define dimn = Character('Дима',kind=nvl, color="#d84b4b" )
 # Игра начинается здесь:
 label start:
-    
-    scene bg podezd:
+    scene black with dissolve 
+    #play sfx1 gorod fadein 1.0 
+    scene bg podezd with dissolve:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
-    "Как-то раз, в первые дни лета 2017 года на юге Нижнего\n Новгорода одна девушка вышла из дома и встретилась\n со своей подругой, чтобы вместе пойти погулять." 
+    "Как-то раз, в первые дни лета 2017 года на юге Нижнего\n Новгорода одна девушка вышла из дома и встретилась\n со своей подругой, чтобы вместе пойти погулять." with dissolve
     "Она обняла пришедшую к ней подругу." 
     nas "Дратути! Ну наконец-то можем пойти погулять!"
     kat "Привет! да, я так рада!"
     nas "Блин, нифига ты модная! Это что, Гоша??"
     kat "Да, недавно купила. Ну что, пойдём?"
     nas "Да, погнали!"
-    scene bg bus_stop:
+    scene black with dissolve
+    pause 0.5
+    scene bg bus_stop with dissolve:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
-    "Оживлённо разговаривая, девчонки дошли до остановки и сели на троллейбус,\n идущий в центр города. Входя в троллейбус, Катя зачем-то оглянулась."
-    kat "Тут одно место только."
+    window hide
+    nn "Оживлённо разговаривая, девчонки дошли до остановки и сели на троллейбус, идущий в центр города." with dissolve
+    nn "Входя в троллейбус, Катя зачем-то оглянулась."
+    nvl clear 
+    kat "Тут одно место только."with dissolve
     nas "Да садись, я постою."
     kat "Ой, спасибо."
+    scene black with dissolve
+    scene bg trolleybus with dissolve:
+        xcenter 0.5 ycenter 0.5 zoom 1.15
+        ease 5 zoom 1
     kat "Блин, я так рада, что наконец-то каникулы.\n Что мы с тобой сейчас едем гулять."
     nas "Да, а то ты со своим лицеем из учёбы совсем не вылезаешь."
     kat "Ну а что, надо было всё сдать. Прикинь,\n у нас на прошлой неделе шли контрольные."
@@ -54,10 +74,13 @@ label start:
     kat "Ладно… как сестра?"
     nas "Молли? Да нормально. Сидит в компе, рисует и играет."
     nas "Мне не жалко, я всё равно в телефоне сижу."
-    scene bg stad:
+    scene black with dissolve
+    scene bg stad with dissolve:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
-    "Долго ли, коротко ли, девчонки доехали до большой красивой\n площади с памятником пролетарскому писателю. И тут как бы\n типичный сценарий прогулки любого  уважающего себя нижегородца\n – по главной улице до местного Кремля, но Катя начала ныть."
+    nvl clear 
+    nn "Долго ли, коротко ли, девчонки доехали до большой красивой площади с памятником пролетарскому писателю."with dissolve
+    nn"И тут как бы типичный сценарий прогулки любого  уважающего себя нижегородца – по главной улице до местного Кремля, но Катя начала ныть."
     kat "Да мы тут тыщу раз были, Насть!"
     nas "Ладно, знаю одно место, пойдём туда."
     "Настя повела Катю через арку по улицам и переулкам\n центра. Пройдя дворами они внезапно вышли на стадион."
@@ -84,7 +107,8 @@ label start:
     "Из колонки полилась современная бодрая перепевка песенки группы Рефлекс."
     "Катя встала и начала дэнсить. В тот момент она не замечала\n никаких проблем с попаданием в ритм, изящностью движений и т.д."
     "Как и не заметила футбольного мяча, вылетевшего из-\nза барьера и коршуном спикировавшего на её умную голову."
-    scene bg l_room:
+    scene black with dissolve
+    scene bg l_room with dissolve:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
     "Несколькими часами ранее в другом месте города у себя дома\n сидел парень шестнадцати лет. Сидел и от скуки скроллил ленту."
@@ -102,7 +126,8 @@ label start:
     leh "Обладает “Файлы” ещё дропнул."
     dim "Но мы с тобой ждём главного."
     leh "Именно, баттла Окси и Гнойного."
-    scene bg football_field:
+    scene black with dissolve
+    scene bg football_field with dissolve:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
     "Наконец, пришли к месту. Парни зашли на одно из полей."

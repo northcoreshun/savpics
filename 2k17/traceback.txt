@@ -1,56 +1,32 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens.rpy", line 601, in prepare_screen
-    screen about():
-  File "game/screens.rpy", line 601, in prepare
-    screen about():
-  File "game/screens.rpy", line 607, in prepare
-    use game_menu(_(""), scroll="viewport"):
-  File "game/screens.rpy", line 607, in prepare
-    use game_menu(_(""), scroll="viewport"):
-  File "game/screens.rpy", line 611, in prepare
-    vbox:
-  File "game/screens.rpy", line 611, in prepare
-    vbox:
-SyntaxError: invalid syntax (game/screens.rpy, line 613)
+While running game code:
+  File "game/script.rpy", line 30, in script
+    play sfx gorod fadein 1.0
+  File "renpy/common/000statements.rpy", line 123, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+Exception: Audio channel 'sfx' is unknown.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\bootstrap.py", line 275, in bootstrap
-    renpy.main.main()
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\main.py", line 670, in main
-    run(restart)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\main.py", line 93, in run
-    renpy.display.screen.prepare_screens()
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\screen.py", line 1003, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens.rpy", line 601, in prepare_screen
-    screen about():
-  File "game/screens.rpy", line 601, in prepare
-    screen about():
-  File "game/screens.rpy", line 607, in prepare
-    use game_menu(_(""), scroll="viewport"):
-  File "game/screens.rpy", line 607, in prepare
-    use game_menu(_(""), scroll="viewport"):
-  File "game/screens.rpy", line 611, in prepare
-    vbox:
-  File "game/screens.rpy", line 611, in prepare
-    vbox:
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\py3analysis.py", line 808, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\py3analysis.py", line 790, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1088, in py_compile
-    raise e
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1034, in py_compile
-    raise orig_e
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1027, in py_compile
-    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
-SyntaxError: invalid syntax (game/screens.rpy, line 613)
+  File "game/script.rpy", line 30, in script
+    play sfx gorod fadein 1.0
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 123, in execute_play_music
+    renpy.music.play(_audio_eval(p["file"]),
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\audio\music.py", line 103, in play
+    c = get_channel(channel)
+  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\audio\audio.py", line 947, in get_channel
+    raise Exception("Audio channel %r is unknown." % name)
+Exception: Audio channel 'sfx' is unknown.
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.1.3.23091805
 Сохры 1.0
-Sun Jan 12 23:06:23 2025
+Mon Jan 13 23:57:52 2025
