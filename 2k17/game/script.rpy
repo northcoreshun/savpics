@@ -1,5 +1,4 @@
-﻿init python:
-    renpy.music.register_channel("sfx1",loop=True)
+init python:
 
     sprite_path = "Sprites/"
     sound_path = "audio/sounds/"
@@ -8,9 +7,92 @@
     image_bg_path = "BackGrounds/"
     image_cg_path = "Cg/"
     fonts_path = "Fonts/"
-    
-define gorod = music_path+"gorod.mp3"
 
+define dspr = Dissolve(0.2)
+    
+layeredimage kat_1:
+    always:
+        sprite_path+"Katya/katya1.png"
+    attribute smile:
+        sprite_path+"Katya/katya smile.png"
+    attribute sad:
+        sprite_path+"Katya/katya sad.png"
+    attribute serious:
+        sprite_path+"Katya/katya serious.png"
+    attribute shy:
+        sprite_path+"Katya/katya shy.png"
+    attribute surprised:
+        sprite_path+"Katya/katya surprised.png"
+
+layeredimage kat_2:
+    always:
+        sprite_path+"Katya/katya2.png"
+    attribute smile:
+        sprite_path+"Katya/katya smile.png"
+    attribute sad:
+        sprite_path+"Katya/katya sad.png"
+    attribute serious:
+        sprite_path+"Katya/katya serious.png"
+    attribute shy:
+        sprite_path+"Katya/katya shy.png"
+    attribute surprised:
+        sprite_path+"Katya/katya surprised.png"
+
+layeredimage nas_1:
+    always:
+        sprite_path+"Nastya/nastya1.png"
+    always:
+        sprite_path+"Nastya/chpoker.png"
+    attribute normal:
+        sprite_path+"Nastya/nastya normal.png"
+    attribute smile:
+        sprite_path+"Nastya/nastya smile.png"
+    attribute serious:
+        sprite_path+"Nastya/nastya serious.png"
+    attribute surprised:
+        sprite_path+"Nastya/nastya surprised.png"
+
+layeredimage nas_2:
+    always:
+        sprite_path+"Nastya/nastya2.png"
+    always:
+        sprite_path+"Nastya/chpoker.png"
+    attribute normal:
+        sprite_path+"Nastya/nastya normal.png"
+    attribute smile:
+        sprite_path+"Nastya/nastya smile.png"
+    attribute serious:
+        sprite_path+"Nastya/nastya serious.png"
+    attribute surprised:
+        sprite_path+"Nastya/nastya surprised.png"
+
+layeredimage andr:
+    always:
+        sprite_path+"Andrey/andrey.png"
+    attribute normal:
+        sprite_path+"Andrey/andrey normal.png"
+    attribute angry:
+        sprite_path+"Andrey/andrey angry.png"
+
+layeredimage dim:
+    always:
+        sprite_path+"Dima/dima.png"
+    attribute normal:
+        sprite_path+"Dima/dima normal.png"
+    attribute smile:
+        sprite_path+"Dima/dima smile.png"
+    attribute serious:
+        sprite_path+"Dima/dima serious.png"
+    attribute surprised:
+        sprite_path+"Dima/dima surprised.png"
+
+layeredimage leh:
+    always:
+        sprite_path+"Leha/leha.png"
+    attribute normal:
+        sprite_path+"Leha/leha normal.png"
+    attribute think:
+        sprite_path+"Leha/leha thinking.png"
 
 define nas = Character('Настя', color="#7ef17e")
 define kat = Character('Катя', color="#cd6af5" )

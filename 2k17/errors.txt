@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 117: end of line expected.
-    scene black with dissolve 3
-                              ^
+File "game/script.rpy", line 43: The always statement can only have one displayable, two found.
+    sprite_path+"Nastya/chpoker.png"
+                                    ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Tue Jan 14 20:23:33 2025
+Tue Jan 14 23:05:55 2025
