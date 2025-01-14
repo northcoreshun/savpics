@@ -27,7 +27,7 @@ define dimn = Character('Дима',kind=nvl, color="#d84b4b" )
 # Игра начинается здесь:
 label start:
     scene black with dissolve 
-    #play sfx1 gorod fadein 1.0 
+    play music gorod fadein 1.0 volume 0.2
     scene bg podezd with dissolve:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
@@ -44,16 +44,19 @@ label start:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
     window hide
+    play sound stoppingtrolleybus volume 0.5
     nn "Оживлённо разговаривая, девчонки дошли до остановки и сели на троллейбус, идущий в центр города." with dissolve
-    nn "Входя в троллейбус, Катя зачем-то оглянулась."
-    nvl clear 
-    kat "Тут одно место только."with dissolve
-    nas "Да садись, я постою."
-    kat "Ой, спасибо."
+    nn "Входя в троллейбус, Катя зачем-то оглянулась." 
+    katn "Тут одно место только."
+    nasn "Да садись, я постою."
+    katn "Ой, спасибо."
+    nvl clear
+    stop music
     scene black with dissolve
     scene bg trolleybus with dissolve:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
+    play music insidetrolleybus fadein 1.0 volume 0.5
     kat "Блин, я так рада, что наконец-то каникулы.\n Что мы с тобой сейчас едем гулять."
     nas "Да, а то ты со своим лицеем из учёбы совсем не вылезаешь."
     kat "Ну а что, надо было всё сдать. Прикинь,\n у нас на прошлой неделе шли контрольные."
@@ -79,6 +82,7 @@ label start:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
     nvl clear 
+    play music intro fadein 1.5 volume 0.3
     nn "Долго ли, коротко ли, девчонки доехали до большой красивой площади с памятником пролетарскому писателю."with dissolve
     nn"И тут как бы типичный сценарий прогулки любого  уважающего себя нижегородца – по главной улице до местного Кремля, но Катя начала ныть."
     kat "Да мы тут тыщу раз были, Насть!"
@@ -98,6 +102,7 @@ label start:
     nas "Давай, тебе подруга предлагает."
     "Катя поломалась, поборолась с собой внутри и согласилась."
     nas "Ну, за окончание десятого!"
+    play sound botlle 
     "Девчонки звонко чокнулись бутылками."
     "Следующие несколько минут можно описать так: на крыше гаража\n Настя уговорила Катю уговорить совместно бутылку-другую гаража."
     "Всё было обсуждено: пацаны, бурно\n развивающиеся в тот год мода и культура мемов."
@@ -106,8 +111,11 @@ label start:
     nas "А вот это новая группа, послушай."
     "Из колонки полилась современная бодрая перепевка песенки группы Рефлекс."
     "Катя встала и начала дэнсить. В тот момент она не замечала\n никаких проблем с попаданием в ритм, изящностью движений и т.д."
+    play sound ball volume 2
     "Как и не заметила футбольного мяча, вылетевшего из-\nза барьера и коршуном спикировавшего на её умную голову."
-    scene black with dissolve
+    stop music fadeout 2.0
+    scene black with dissolve 
+    pause 2
     scene bg l_room with dissolve:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
