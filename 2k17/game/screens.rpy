@@ -414,7 +414,8 @@ screen main_menu():
     ## Этот тег гарантирует, что любой другой экран с тем же тегом будет
     ## заменять этот.
     tag menu
-
+    $ renpy.music.play(audio_path+"intro.mp3", loop=True)
+    $ renpy.music.set_volume(0.5)
     add 'menu_slideshow'
 
     ## Основной вертикальный контейнер для всего меню
@@ -427,28 +428,27 @@ screen main_menu():
         frame:
             padding (30, 30, 30, 30) 
             xalign 0.5
-            textbutton _("Сохры") action ShowMenu("about"):
+            textbutton _("СОХРЫ") action ShowMenu("about"):
                 text_size 50 
         frame:
             padding (20, 25, 20, 20) 
             xalign 0.5
-            textbutton _("Начать") action Start():
+            textbutton _("НАЧАТЬ") action Start():
                 text_size 25
         frame:
             padding (20, 25, 20, 20) 
             xalign 0.5
-            textbutton _("Загрузить") action ShowMenu("load"):
+            textbutton _("ЗАГРУЗИТЬ") action ShowMenu("load"):
                 text_size 25
         frame:
             padding (20, 25, 20, 20) 
             xalign 0.5
-            textbutton _("Настройки") action ShowMenu("preferences"):
+            textbutton _("НАСТРОЙКИ") action ShowMenu("preferences"):
                 text_size 25 
-    frame:
-        padding (20, 25, 20, 20) 
-        xalign 0.99
-        yalign 0.99
-        textbutton _("Выход") action Quit(confirm=not main_menu):
+        frame:
+            padding (20, 25, 20, 20) 
+            xalign 0.5
+            textbutton _("ВЫХОД") action Quit(confirm=not main_menu):
                 text_size 25  
 
 

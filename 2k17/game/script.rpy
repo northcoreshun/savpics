@@ -2,8 +2,7 @@ init python:
 
     sprite_path = "Sprites/"
     sound_path = "audio/sounds/"
-    music_path = "audio/music/"
-    ambient_path = "audio/ambient/"
+    audio_path = "audio/"
     image_bg_path = "BackGrounds/"
     image_cg_path = "Cg/"
     fonts_path = "Fonts/"
