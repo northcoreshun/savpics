@@ -106,6 +106,17 @@ define nasn = Character('Настя',kind=nvl, color="#7ef17e")
 define katn = Character('Катя',kind=nvl, color="#cd6af5" )
 define lehn = Character('Лёша',kind=nvl, color="#3bb1ff" )
 define dimn = Character('Дима',kind=nvl, color="#d84b4b" )
+
+image menu_slideshow:
+        im.Blur(image_bg_path +"bg bus_stop.jpg", 1.5) with dissolve
+        pause 5.0
+        im.Blur(image_bg_path +"bg roof.jpg",1.5) with dissolve
+        pause 5.0
+        im.Blur(image_bg_path +"bg podezd.jpg",1.5) with dissolve
+        pause 5.0
+        im.Blur(image_bg_path +"bg dvor_rassvet.jpg",1.5) with dissolve
+        pause 5.0
+        repeat
 # Игра начинается здесь:
 label start:
     scene black with dissolve 

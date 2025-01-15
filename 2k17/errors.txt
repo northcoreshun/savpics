@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 43: The always statement can only have one displayable, two found.
-    sprite_path+"Nastya/chpoker.png"
-                                    ^
+File "game/screens.rpy", line 430: textbutton expects a non-empty block.
+    textbutton _("Сохры") action ShowMenu("about"):
+                                                   ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Tue Jan 14 23:05:55 2025
+Wed Jan 15 17:59:31 2025

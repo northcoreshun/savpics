@@ -32,7 +32,10 @@ define config.version = "1.0"
 define gui.about = _p("""Привет!\n
 Я визуальная новелла "Сохры" сделанная специально для Капелла джема.\n
 Я, конечно, не игра где ты типо грибок и прыгаешь по супер Марио, но надеюсь, что\n
-миллионы в меня поиграли бы…
+миллионы в меня поиграли бы…\n
+Также в игре содержатся материалы в соответствиями с лицензиями\n
+{a=https://www.sberbank.com/common/img/uploaded/files/promo/kandinskiy-terms/kandinskiy-terms-of-use.pdf}Kandinsky{/a}, {a=https://pixai.art/model/1816942757386940962), Pixabay (https://pixabay.com/ru/service/license-summary/}модели PixAI {/a}, {a=https://zvukipro.com/polzovatelskoe-soglashenie.html}Zvukipro{/a} и {a=https://freesound.org/help/tos_web/#intellectual-property-rights}Freesound{/a}.
+
 """)
 
 

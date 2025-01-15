@@ -415,33 +415,46 @@ screen main_menu():
     ## заменять этот.
     tag menu
 
-    add gui.main_menu_background
+    add 'menu_slideshow'
 
-    ## Эта пустая рамка затеняет главное меню.
+    ## Основной вертикальный контейнер для всего меню
+    vbox:
+        xalign 0.5  # Центрируем по горизонтали
+        yalign 0.3  # Центрируем по вертикали
+        spacing 20  # Отступ между кнопками
+
+        ## Кнопка "Сохры" с увеличенным размером и белым текстом
+        frame:
+            padding (30, 30, 30, 30) 
+            xalign 0.5
+            textbutton _("Сохры") action ShowMenu("about"):
+                text_size 50 
+        frame:
+            padding (20, 25, 20, 20) 
+            xalign 0.5
+            textbutton _("Начать") action Start():
+                text_size 25
+        frame:
+            padding (20, 25, 20, 20) 
+            xalign 0.5
+            textbutton _("Загрузить") action ShowMenu("load"):
+                text_size 25
+        frame:
+            padding (20, 25, 20, 20) 
+            xalign 0.5
+            textbutton _("Настройки") action ShowMenu("preferences"):
+                text_size 25 
     frame:
-        style "main_menu_frame"
+        padding (20, 25, 20, 20) 
+        xalign 0.99
+        yalign 0.99
+        textbutton _("Выход") action Quit(confirm=not main_menu):
+                text_size 25  
 
-    ## Оператор use включает отображение другого экрана в данном. Актуальное
-    ## содержание главного меню находится на экране навигации.
-    use navigation
-
-    if gui.show_name:
-
-        vbox:
-            style "main_menu_vbox"
-
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
 
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
-style main_menu_text is gui_text
-style main_menu_title is main_menu_text
-style main_menu_version is main_menu_text
 
 style main_menu_frame:
     xsize 420
