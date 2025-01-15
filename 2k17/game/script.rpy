@@ -9,89 +9,75 @@ init python:
 
 define dspr = Dissolve(0.2)
     
-layeredimage kat_1:
+layeredimage kat:
     always:
-        sprite_path+"Katya/katya1.png"
-    attribute smile:
-        sprite_path+"Katya/katya smile.png"
-    attribute sad:
-        sprite_path+"Katya/katya sad.png"
-    attribute serious:
-        sprite_path+"Katya/katya serious.png"
-    attribute shy:
-        sprite_path+"Katya/katya shy.png"
-    attribute surprised:
-        sprite_path+"Katya/katya surprised.png"
+        sprite_path + "Katya/katya0.png"
+    group pose:
+        attribute pose1:
+            sprite_path + "Katya/katya1.png"
+        attribute pose2:
+            sprite_path + "Katya/katya2.png"
+    group emotion:
+        attribute smile:
+            sprite_path + "Katya/katya smile.png"
+        attribute sad:
+            sprite_path + "Katya/katya sad.png"
+        attribute serious:
+            sprite_path + "Katya/katya serious.png"
+        attribute shy:
+            sprite_path + "Katya/katya shy.png"
+        attribute surprised:
+            sprite_path + "Katya/katya surprised.png"
+    
 
-layeredimage kat_2:
+layeredimage nas:
     always:
-        sprite_path+"Katya/katya2.png"
-    attribute smile:
-        sprite_path+"Katya/katya smile.png"
-    attribute sad:
-        sprite_path+"Katya/katya sad.png"
-    attribute serious:
-        sprite_path+"Katya/katya serious.png"
-    attribute shy:
-        sprite_path+"Katya/katya shy.png"
-    attribute surprised:
-        sprite_path+"Katya/katya surprised.png"
-
-layeredimage nas_1:
-    always:
-        sprite_path+"Nastya/nastya1.png"
-    always:
-        sprite_path+"Nastya/chpoker.png"
-    attribute normal:
-        sprite_path+"Nastya/nastya normal.png"
-    attribute smile:
-        sprite_path+"Nastya/nastya smile.png"
-    attribute serious:
-        sprite_path+"Nastya/nastya serious.png"
-    attribute surprised:
-        sprite_path+"Nastya/nastya surprised.png"
-
-layeredimage nas_2:
-    always:
-        sprite_path+"Nastya/nastya2.png"
-    always:
-        sprite_path+"Nastya/chpoker.png"
-    attribute normal:
-        sprite_path+"Nastya/nastya normal.png"
-    attribute smile:
-        sprite_path+"Nastya/nastya smile.png"
-    attribute serious:
-        sprite_path+"Nastya/nastya serious.png"
-    attribute surprised:
-        sprite_path+"Nastya/nastya surprised.png"
+        sprite_path+"Nastya/nastya0.png"
+    group pose:
+        attribute pose1:
+            sprite_path + "Nastya/nastya1.png"
+        attribute pose2:
+            sprite_path + "Nastya/nastya2.png"
+    group emotion:
+        attribute normal:
+            sprite_path+"Nastya/nastya normal.png"
+        attribute smile:
+            sprite_path+"Nastya/nastya smile.png"
+        attribute serious:
+            sprite_path+"Nastya/nastya serious.png"
+        attribute surprised:
+            sprite_path+"Nastya/nastya surprised.png"
 
 layeredimage andr:
     always:
         sprite_path+"Andrey/andrey.png"
-    attribute normal:
-        sprite_path+"Andrey/andrey normal.png"
-    attribute angry:
-        sprite_path+"Andrey/andrey angry.png"
+    group emotion:
+        attribute normal:
+            sprite_path+"Andrey/andrey normal.png"
+        attribute angry:
+            sprite_path+"Andrey/andrey angry.png"
 
 layeredimage dim:
     always:
         sprite_path+"Dima/dima.png"
-    attribute normal:
-        sprite_path+"Dima/dima normal.png"
-    attribute smile:
-        sprite_path+"Dima/dima smile.png"
-    attribute serious:
-        sprite_path+"Dima/dima serious.png"
-    attribute surprised:
-        sprite_path+"Dima/dima surprised.png"
+    group emotion:
+        attribute normal:
+            sprite_path+"Dima/dima normal.png"
+        attribute smile:
+            sprite_path+"Dima/dima smile.png"
+        attribute serious:
+            sprite_path+"Dima/dima serious.png"
+        attribute surprised:
+            sprite_path+"Dima/dima surprised.png"
 
 layeredimage leh:
     always:
         sprite_path+"Leha/leha.png"
-    attribute normal:
-        sprite_path+"Leha/leha normal.png"
-    attribute think:
-        sprite_path+"Leha/leha thinking.png"
+    group emotion:
+        attribute normal:
+            sprite_path+"Leha/leha normal.png"
+        attribute think:
+            sprite_path+"Leha/leha thinking.png"
 
 define nas = Character('Настя', color="#7ef17e")
 define kat = Character('Катя', color="#cd6af5" )
@@ -123,12 +109,28 @@ label start:
     scene bg podezd with dissolve:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
+    show nas pose1 smile with dissolve:
+        xpos 0.05 ypos 0.09
+    show kat pose1 smile:
+        anchor(.5,.5) pos(1.2,0.567) alpha 0
+        ease 0.5 xpos(.8) alpha 1
     "Как-то раз, в первые дни лета 2017 года на юге Нижнего\n Новгорода одна девушка вышла из дома и встретилась\n со своей подругой, чтобы вместе пойти погулять." with dissolve
+    show kat pose1 shy:
+        anchor(.5,.5) pos(.8,0.567) 
+        ease 0.5 xpos(.3) 
+    show nas pose2 smile with dspr
+    pause 1
+    show kat pose2 smile:
+        anchor(.5,.5) pos(.3,0.567) 
+        ease 0.5 xpos(.75)
     "Она обняла пришедшую к ней подругу." 
     nas "Дратути! Ну наконец-то можем пойти погулять!"
     kat "Привет! да, я так рада!"
+    show nas pose1 surprised with dspr
     nas "Блин, нифига ты модная! Это что, Гоша??"
+    show kat pose1 smile with dspr
     kat "Да, недавно купила. Ну что, пойдём?"
+    show nas pose1 smile with dspr
     nas "Да, погнали!"
     scene black with dissolve
     pause 0.5
@@ -149,24 +151,32 @@ label start:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
     play music insidetrolleybus fadein 1.0 volume 0.5
+    show nas pose1 normal with dissolve:
+        xpos 0.2 ypos 0.09
     kat "Блин, я так рада, что наконец-то каникулы.\n Что мы с тобой сейчас едем гулять."
+    show nas pose1 serious with dspr
     nas "Да, а то ты со своим лицеем из учёбы совсем не вылезаешь."
     kat "Ну а что, надо было всё сдать. Прикинь,\n у нас на прошлой неделе шли контрольные."
     nas "Ну и че, у нас тоже."
     kat "У нас ещё по задачам ЕГЭ было. в один день математику, в другой\n день по физике. Ещё зачёт по биологии, где надо было билеты учить."
+    show nas pose2 surprised with dspr
     nas "Пиздец… и как, сдала?"
     kat "Оф корс, а как же иначе?"
+    show nas pose2 smile with dspr
     nas "Молодец."
     "Катя немного помолчала."
     kat "Насть… я опять его видела. Он за нами наблюдал."
+    show nas pose2 surprised with dspr
     nas "Кого?"
     kat "Кого-кого… Андрея."
+    show nas pose2 normal with dspr
     nas "Ну хз, может мимо проходил."
     kat "Он же далеко живёт, чё ему тут делать?"
     nas "Не знаю… Кать, да забей."
     kat "Я его не в первый раз вижу. Когда с лицея\n приезжаю, тоже замечала не раз его."
     nas "Ну… может друг рядом живёт. Не переживай ты так."
     kat "Ладно… как сестра?"
+    show nas pose1 normal with dspr
     nas "Молли? Да нормально. Сидит в компе, рисует и играет."
     nas "Мне не жалко, я всё равно в телефоне сижу."
     scene black with dissolve
@@ -177,34 +187,56 @@ label start:
     play music intro fadein 1.5 volume 0.3
     nn "Долго ли, коротко ли, девчонки доехали до большой красивой площади с памятником пролетарскому писателю."with dissolve
     nn"И тут как бы типичный сценарий прогулки любого  уважающего себя нижегородца – по главной улице до местного Кремля, но Катя начала ныть."
+    nvl clear
+    show kat pose2 sad with dissolve:
+        xpos 0.7 ypos 0.135
     kat "Да мы тут тыщу раз были, Насть!"
+    show nas pose1 serious with dissolve:
+        xpos 0.05 ypos 0.09
     nas "Ладно, знаю одно место, пойдём туда."
-    "Настя повела Катю через арку по улицам и переулкам\n центра. Пройдя дворами они внезапно вышли на стадион."
-    "Тот самый стадион, снявшийся в фильме Балабанова."
+    nn"Настя повела Катю через арку по улицам и переулкам\n центра. Пройдя дворами они внезапно вышли на стадион."
+    scene bg roof with dissolve
+    nn"Тот самый стадион, снявшийся в фильме Балабанова."with dissolve
+    nvl clear
+    show kat pose2 surprised with dissolve:
+        xpos 0.2 ypos 0.135
+        xzoom -1.0
     kat "Блин, нифига, не знала, что тут пройти можно. Мы\n сюда на физру ходим из лицея, но другой дорогой."
+    show nas pose1 serious with dissolve:
+        xpos 0.6 ypos 0.09
+        xzoom -1.0
     "Катя с Настей ушли подальше от оффников, тренирующихся\n у спортшколы, на другой конец и забрались на гаражи."
     nas "Ну, наконец-то."
-    kat "Насть, тут жарко."
+    show kat pose1 sad with dspr
+    kat "Насть, тут жарко." 
+    show nas pose1 smile with dspr
     nas "Да хорош, тебе всё не нравится. У меня есть чем охладиться."
     "Настя достала из сумки… две бутылки гаража."
+    show kat pose2 surprised with dspr
     "Катя оторопела."
     kat "Насть, я ж не пью."
     nas "Да ладно те, тут немного."
     kat "Ну, я не знаю."
     nas "Давай, тебе подруга предлагает."
+    show kat pose2 sad with dspr
     "Катя поломалась, поборолась с собой внутри и согласилась."
+    show nas pose2 smile with dspr
     nas "Ну, за окончание десятого!"
     play sound botlle 
+    show kat pose2 smile with dspr
     "Девчонки звонко чокнулись бутылками."
     "Следующие несколько минут можно описать так: на крыше гаража\n Настя уговорила Катю уговорить совместно бутылку-другую гаража."
     "Всё было обсуждено: пацаны, бурно\n развивающиеся в тот год мода и культура мемов."
     "Не забыли на этом празднике жизни и про музыку: Настя\n прихватила с собой “жи-би-эль”, благодаря которому\n июньский день окончательно перестал быть томным."
+    show kat pose1 smile with dspr
     "Алкоголь нехило подействовал на светловолосую\n ботанку, возможно сказались недавние бессонные ночи."
+    show nas pose1 smile with dspr
     nas "А вот это новая группа, послушай."
     "Из колонки полилась современная бодрая перепевка песенки группы Рефлекс."
     "Катя встала и начала дэнсить. В тот момент она не замечала\n никаких проблем с попаданием в ритм, изящностью движений и т.д."
-    play sound ball volume 2
-    "Как и не заметила футбольного мяча, вылетевшего из-\nза барьера и коршуном спикировавшего на её умную голову."
+    show kat pose1 surprised with dspr
+    play sound ball volume 2 
+    "Как и не заметила футбольного мяча, вылетевшего из-\nза барьера и коршуном спикировавшего на её умную голову." with vpunch
     stop music fadeout 2.0
     scene black with dissolve 
     pause 2
@@ -214,9 +246,10 @@ label start:
     "Несколькими часами ранее в другом месте города у себя дома\n сидел парень шестнадцати лет. Сидел и от скуки скроллил ленту."
     "Вдруг его глаз зацепился за фото девушки.\n Недолго думая, он добавил её в «Сохранённые»."
     "Увидел имя – Екатерина Мохова. Это имя ему показалось\n знакомым. Он начал вспоминать, но его отвлекло сообщение вк."
-    "– Лёх, здорова"
-    "– Идёшь седня?"
-    "Лёша быстро ответил, собрался и пошёл."
+    nvl clear
+    nn"– Лёх, здорова" with dissolve
+    nn"– Идёшь седня?"
+    "Лёша быстро ответил, собрался и пошёл."with dissolve
     "Лишь недавно у него появилось полное право выйти из дома и\n пойти, куда ему нужно. Не потому, что он убегал из дома или\n как-то ещё косячил. Просто родители  поддерживали жёсткий\n порядок. По факту – держали сына под домашним арестом."
     "Благо Лёша почти всё время был занят учёбой и\n сидением в интернете и планов побега не строил."
     "Но всему приходит конец, правила жизни смягчаются, после учёбы наступают\n каникулы и вот наш герой идёт к тому, кто ему писал. К своему другу Диме."
@@ -232,54 +265,95 @@ label start:
         ease 5 zoom 1
     "Наконец, пришли к месту. Парни зашли на одно из полей."
     leh "О, а мы сюда на физру ходим."
+    show dim smile with dissolve:
+        xpos 0.1 ypos 0.05
     dim "Везёт же вам."
     dim "Так, ждём остальных пока."
-    "В своё время Дима втянул Лёшу в свою футбольную тусовку. Она\n была создана для чилловой игры, входного порога и требований\n не было. Это и стало причиной, почему Лёха со своим сидением\n дома и отсутствием “дворовой” жизни смог войти в их круг."
-    "Периодически ребята собирались поиграть на коробках у школ и на\n стадионах. Между играми умеющие ребята могли подтянуть аутсайдеров.\n В тот день это и делал Дима, проводил ликбез как бить по воротам."
-    dim "Смотри, прямо носком бить не надо, ногу при ударе немного подворачиваешь."
+    show dim normal with dspr
+    nvl clear
+    nn"В своё время Дима втянул Лёшу в свою футбольную тусовку. Она\n была создана для чилловой игры, входного порога и требований\n не было. Это и стало причиной, почему Лёха со своим сидением\n дома и отсутствием “дворовой” жизни смог войти в их круг." with dissolve
+    nn"Периодически ребята собирались поиграть на коробках у школ и на\n стадионах. Между играми умеющие ребята могли подтянуть аутсайдеров.\n В тот день это и делал Дима, проводил ликбез как бить по воротам."
+    show dim serious with dspr
+    dim "Смотри, прямо носком бить не надо, ногу при ударе немного подворачиваешь."with dissolve
     leh "Окей, я пока попрактикуюсь."
+    show dim normal with dspr
     dim "А я пока чекну где наши."
+    hide dim with dissolve
     "Где-то недалеко была слышна речь и играла музыка."
     leh "Дим, а кто там?"
+    show dim serious with dissolve:
+        xpos 0.1 ypos 0.05
     dim "Да забей, какие-то челы."
     "Ответил Дима, не отрывая глаз от телефона."
     dim "Бля, они вообще на другую коробку пошли!"
     leh "Чего??"
-    "В этот момент Лёша как раз готовился ударить по мячу. В моменте\n небольшая обида на товарищей, не предупредивших их, выросла до сильного\n импульса и он   ударил со всей силы. Мяч улетел вверх и скрылся за крышей."
+    show dim surprised with dspr
+    play sound football
+    "В этот момент Лёша как раз готовился ударить по мячу. В моменте\n небольшая обида на товарищей, не предупредивших их, выросла до сильного\n импульса и он   ударил со всей силы. Мяч улетел вверх и скрылся за крышей." with vpunch
     "Там, куда улетел мяч, послышалась какая-то возня."
+    show dim serious with dspr
     dim "Бля, Лёх. Нахуя…"
     dim "Ну чё, автор бежит за мячом."
     leh "Ой, извини. Ну, я побежал."
+    hide dim with dissolve
     "Уже в спину убегавшему Лёше пришло Димино “Это фиаско, братан”."
-
+    scene black with dissolve 
+    pause 1
+    scene bg roof with dissolve:
+        xcenter 0.5 ycenter 0.5 zoom 1.15
+        ease 5 zoom 1
     "От удара мячом с Катей случилось нечто странное."
+    show nas pose1 surprised with dissolve:
+        xpos 0.5 ypos 0.09
+        xzoom -1.0
+    show kat pose2 surprised with dissolve:
+        xpos 0.25 ypos 0.135
+        xzoom -1.0
     nas "Кать, ты чего? Какая пандемия, какая..? Ох, и сильно же\n тебя ударило! Пойдём дослушаем Молли в другом месте."
+    play music meeting fadein 1 volume 0.7
     "Из-за гаража послышался голос Лёши."
     leh "Извините, можете нам мяч скинуть…"
-    nas "ВЫ ЧЁ БЛЯТЬ ДЕЛАЕТЕ?! ВЫ ЧЁ СОВСЕМ ОХУЕЛИ?! ВЫ ЕЁ НАХУЙ ЧУТЬ НЕ УБИЛИ!"
+    show nas pose1 serious with dspr
+    nas "ВЫ ЧЁ БЛЯТЬ ДЕЛАЕТЕ?! ВЫ ЧЁ СОВСЕМ ОХУЕЛИ?! ВЫ ЕЁ НАХУЙ ЧУТЬ НЕ УБИЛИ!" with vpunch
     nas "Слышь, сюда иди, я те этот мяч засуну в…"
+    show kat pose1 sad with dspr
     kat "Насть, не ори пожалуйста! Со мной всё нормально."
     "Лёша неуклюже залез на гараж. И увидел девчонок – Настя метала на него\n свирепые взгляды, Катя сочувствующе смотрела и держала у головы бутылку."
     leh "Блин, извини, я случайно!"
     kat "Всё нормально. Солнечный удар наверное."
+    show nas pose1 serious:
+        anchor(.5,.5) pos(0.6,0.55) 
+        ease 0.5 xpos(.8) 
+    show kat pose1 sad:
+        anchor(.5,.5) pos(0.4,0.6) 
+        ease 0.5 xpos(.6) 
+    show dim surprised:
+        anchor(.5,.5) pos(-0.8,0.55) 
+        ease 0.5 xpos(.2) 
     "Внезапно на крыше возник ещё и Дима, подоспевший на крик."
     dim "Чё случилось?"
     nas "Вы своим мячом чуть мою подругу не убили!"
+    show dim smile with dspr
     "Дима окинул взглядом ребят, понял что к чему и еле сдержал смех."
     dim "Прошу простить моего друга, он случайно!"
+    show kat pose1 smile with dspr
     "Слова Димы успокоительно подействовали на Настю, она даже улыбнулась."
     "Ссора начала переходить в знакомство."
+    show nas pose1 normal with dspr
     nas "С какой школы хоть?"
     leh "А что?"
+    show nas pose1 serious with dspr
     nas "Жаловаться буду!"
     leh "Блин…"
     dim "Лёх, она шутит."
+    show nas pose2 smile with dspr
     nas "Конечно, шучу!"
     "Парни сказали номера школ. Когда назвал Лёша, девчонки оживились."
     nas "Кать, смотри, он ещё и с твоего лицея!"
     kat "Какой класс?"
     leh "Десятый, физмат."
     kat "Я с десятого, биохим."
+    show nas pose1 smile with dspr
     nas "Ладно, пойдёмте. Ты ещё Кате мороженое\n должен за своё поведение. И мне ещё."
     leh "А тебе за что?"
     nas "Как за что? Я такой стресс пережила из-за подруги. Кать, что скажешь?"
@@ -288,16 +362,36 @@ label start:
     dim "Да ладно Лёх, я займу."
     "Смеясь сказал Дима."
     leh "Погоди, а как же ребята?"
+    show dim normal with dspr
     dim "Какие ребята? Которые нас кинули?"
+    show dim smile with dspr
     dim "Пойдём, не отлынивай от проставы девчонкам."
     nas "Вот, правильно!"
-
+    stop music
+    scene black with dissolve 
+    pause 1
+    play music gorod fadein 1.0 volume 0.2
+    scene bg shaurma with dissolve:
+        xcenter 0.5 ycenter 0.5 zoom 1.15
+        ease 5 zoom 1
     "Следующие пару часов прошли просто прекрасно: Настя\n и Дима нашли коннект на обсуждении рэпа и секондов,\n Катя и Лёша – на обсуждении нелёгкой учёбы в лицее."
     "Прогулка новоиспечённой компании закончилась у шаурмичной.\n Место, которое знала вся молодёжь города, и которое\n в своё время прошло проверку на телепередаче про общепит."
+    show nas pose1 smile with dissolve:
+        xpos 0.6 ypos 0.09
+        xzoom -1.0
     nas "Ну чё, рады были знакомству."
+    show kat pose2 smile with dissolve:
+        xpos 0.3 ypos 0.14
+        xzoom -1.0
     kat "И спасибо за мороженое."
     nas "Приезжайте к нам в Щербы. У нас тоже есть, где затусить."
+    hide kat 
+    hide nas
+    with dissolve
     "Автобус забрал девчонок. Так и закончилась та прогулка."
+    stop music
+    scene black with dissolve 
+    pause 1
 
     "Пока родителей Кати не было, она пригласила\n Настю к себе на ночевку. Девчонки решили посмотреть\n хайповый сериал про будни норвежских школьников."
     "После просмотра Настя решила выйти на балкон насладиться закатом."

@@ -120,6 +120,8 @@ screen say(who, what):
                 style "textbox_medium"
             elif line_count == 3:
                 style "textbox_large"
+            elif line_count == 0:
+                style "textbox_void"
             else:
                 style "textbox_extralarge" 
             text what id "what"
@@ -142,6 +144,13 @@ style say_thought is say_dialogue
 
 style namebox is default
 style namebox_label is say_label
+
+style textbox_void:
+    xalign 0.5
+    yalign 0.5  
+    ypos gui.dialogue_ypos
+    background "#00000000"
+    padding (20, 20, 20, 30)
 
 style textbox_small:
     xalign 0.5
@@ -414,8 +423,8 @@ screen main_menu():
     ## Этот тег гарантирует, что любой другой экран с тем же тегом будет
     ## заменять этот.
     tag menu
-    $ renpy.music.play(audio_path+"intro.mp3", loop=True)
-    $ renpy.music.set_volume(0.5)
+    #$ renpy.music.play(audio_path+"intro.mp3", loop=True, fadein=4.0)
+    #$ renpy.music.set_volume(0.5)
     add 'menu_slideshow'
 
     ## Основной вертикальный контейнер для всего меню
