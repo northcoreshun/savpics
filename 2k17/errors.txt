@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 292: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
-    xpos 0.1 ypos 0.05
-    ^
+File "game/script.rpy", line 340: Tab characters are not allowed in Ren'Py scripts.
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Thu Jan 16 14:39:35 2025
+Thu Jan 16 16:40:43 2025

@@ -319,13 +319,25 @@ label start:
     play music meeting fadein 1 volume 0.7
     "Из-за гаража послышался голос Лёши."
     leh "Извините, можете нам мяч скинуть…"
-    show nas pose1 serious with dspr
+    show nas pose1 serious:
+        matrixcolor TintMatrix("#d84b4b")
+        ease .05 xoffset -10
+        ease .05 xoffset 20
+        ease .05 xoffset -10
+        repeat
     nas "ВЫ ЧЁ БЛЯТЬ ДЕЛАЕТЕ?! ВЫ ЧЁ СОВСЕМ ОХУЕЛИ?! ВЫ ЕЁ НАХУЙ ЧУТЬ НЕ УБИЛИ!" with vpunch
+    hide nas with dspr
     nas "Слышь, сюда иди, я те этот мяч засуну в…"
     show kat pose1 sad with dspr
+    show nas pose1 serious with dissolve:
+        xpos 0.5 ypos 0.135
+        xzoom -1.0
     kat "Насть, не ори пожалуйста! Со мной всё нормально."
+    hide kat with dspr
     "Лёша неуклюже залез на гараж. И увидел девчонок – Настя метала на него\n свирепые взгляды, Катя сочувствующе смотрела и держала у головы бутылку."
     leh "Блин, извини, я случайно!"
+    show kat pose1 sad with dspr:
+        anchor(.5,.5) pos(.4,.567)
     kat "Всё нормально. Солнечный удар наверное."
     show nas pose1 serious:
         anchor(.5,.5) pos(0.6,0.55) 
@@ -335,7 +347,7 @@ label start:
         ease 0.5 xpos(.6) 
     show dim surprised:
         anchor(.5,.5) pos(-0.8,0.55) 
-        ease 0.5 xpos(.2) 
+        ease 0.5 xpos(.25) 
     "Внезапно на крыше возник ещё и Дима, подоспевший на крик."
     dim "Чё случилось?"
     nas "Вы своим мячом чуть мою подругу не убили!"
