@@ -205,7 +205,7 @@ style say_dialogue:
     xpos gui.dialogue_xpos
     ypos gui.dialogue_ypos
     adjust_spacing False
-    line_spacing 10
+    line_spacing 14
 ## Экран ввода #################################################################
 ##
 ## Этот экран используется, чтобы показывать renpy.input. Это параметр запроса,
