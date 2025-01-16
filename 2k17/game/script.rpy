@@ -81,6 +81,7 @@ layeredimage leh:
 
 define nas = Character('Настя', color="#7ef17e")
 define kat = Character('Катя', color="#cd6af5" )
+define katk = Character('Катя', color="#cd6af5",what_color = "#ff0000")
 define leh = Character('Лёша', color="#3bb1ff" )
 define dim = Character('Дима', color="#d84b4b" )
 define gol = Character('Голос', color = "#7a2f2f")
@@ -557,13 +558,25 @@ label start:
     stop music
     play music attack fadein 1 volume 0.7
     "С улицы послышался шум и ребята произвольно посмотрели в его сторону.\n К ним приближалась компания парней. Увидев одного из них, у Кати\n сердце в пятки ушло. Лёша тоже узнал его. А он узнал их и подскочил."
+    show andr normal:
+        xzoom -1
+        anchor(.5,.5) pos(-0.2,0.57) 
+        ease 0.5 xpos(.3) 
+        
+    pause 2
     show dim surprised
     show nas pose2 surprised
     with dspr
     play sound head_punch
     "Со словами “Ты чё тут делаешь?” отвесил Лёше подзатыльник." with vpunch
+    show andr normal:
+        anchor(.5,.5) pos(.3,0.57) 
+        ease 0.5 xpos(.6) 
     show kat pose2 shy with dspr
     "Затем той же рукой резким движением замахнулся\n на Катю. Та испугалась и зажмурилась."
+    show andr normal:
+        anchor(.5,.5) pos(.6,0.57) 
+        ease 0.5 xpos(1.2) 
     "Однако налётчик не стал бить её и оперативно скрылся в Макдональдсе.\n Так быстро, что не услышал посланное вдогонку Настино\n “Ты чё творишь?!”."
     show kat pose2 sad with dspr
     "Компания стояла в шоке от этого: Лёша потирал место\n удара, Катя приходила в себя, Настя сокрушённо\n материлась, Дима… просто стоял с глазами по пять копеек."
@@ -572,7 +585,7 @@ label start:
     show kat pose2 serious with dspr
     kat "Насть."
     "Вдруг тяжёлым голосом сказала Катя."
-    kat "Рот закрой."
+    katk "Рот закрой."
     show dim serious with dspr
     "Катя сказала это негромко, но с такой злобой и силой\n в голосе, что даже парни не решились что-то говорить."
     show nas pose1 normal
@@ -669,7 +682,7 @@ label start:
     nas "А что, сбежал от мамки, нормальный повод."
     scene black with dissolve 
     pause 1
-    play music walking fadein 1.0 
+    play sound walking fadein 1.0 
     scene bg dvor_night with dissolve:
         xcenter 0.5 ycenter 0.5 zoom 1.15
         ease 5 zoom 1
@@ -677,6 +690,7 @@ label start:
     nn "Лёша с Настей ушли в глубь района." 
     nn "Жилой массив напоминал тёмный лес, полный опасностей, но Лёша пошёл."
     nn "Надавило то желание побывать на тех самых вписках, о которых он регулярно читал в интернете."
+    play sound domofona_vhod
     nn "Они с Настей долго шли по тёмным улицам и дворам, а затем зашли в подъезд дома. Одного из многих панельных девятиэтажек, коими застроен весь город."
     scene black with dissolve 
     pause 1
@@ -701,7 +715,7 @@ label start:
     show nas pose1 serious with dspr
     "Голос показался знакомым. Тут же Лёша узнал и напрягся."
     nas "Чё ты несёшь, хорошо она учится."
-    show andr normal:
+    show andr angry:
         anchor(.5,.5) pos(1.2,0.57) 
         ease 0.5 xpos(.85) 
     andr "Да чё она может? Я ей скатывать давал."
@@ -758,6 +772,7 @@ label start:
     "Лёша схватил её за шкирку и поволок из комнаты. Дверь он выбил\n ногой. Увидев изумлённых посетителей вписки, выглядывающих\n из гостиной, Лёха обматерил их, чтобы не подходили."
     "В это время они успели обуться, Лёша широко\n распахнул дверь и потащил Настю со вписки."
     "От произошедшего её начало тошнить. На лестничной площадке она\n прицепилась к перилам, запрокинулась на них и устроила водопад."
+    play sound domofon_exit
     "Затем они вместе выбежали на улицу."
     scene black with dissolve 
     pause 1
