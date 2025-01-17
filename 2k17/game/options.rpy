@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## Версия игры.
 
-define config.version = "1.0"
+define config.version = "1.01"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными скобками.
@@ -34,7 +34,9 @@ define gui.about = _p("""Привет!\n
 Я, конечно, не игра где ты типо грибок и прыгаешь по супер Марио, но надеюсь, что\n
 миллионы в меня поиграли бы…\n
 Также в игре содержатся материалы в соответствиями с лицензиями\n
-{a=https://www.sberbank.com/common/img/uploaded/files/promo/kandinskiy-terms/kandinskiy-terms-of-use.pdf}Kandinsky{/a}, {a=https://pixai.art/model/1816942757386940962}модели PixAI{/a}, {a=https://pixabay.com/ru/service/license-summary/}Pixabay{/a}, {a=https://zvukipro.com/polzovatelskoe-soglashenie.html}Zvukipro{/a} и {a=https://freesound.org/help/tos_web/#intellectual-property-rights}Freesound{/a} 
+{a=https://www.sberbank.com/common/img/uploaded/files/promo/kandinskiy-terms/kandinskiy-terms-of-use.pdf}Kandinsky{/a},
+{a=https://fonts.google.com/specimen/Press+Start+2P/license}OFL{/a}, {a=https://pixai.art/model/1816942757386940962}модели PixAI{/a}, {a=https://pixabay.com/ru/service/license-summary/}Pixabay{/a}, {a=https://zvukipro.com/uslovija-ispolzovanija.html}Zvukipro{/a} и {a=https://freesound.org/help/tos_web/#intellectual-property-rights}Freesound{/a}.\n
+Для просмотра некоторых лицензий требуется VPN 
 
 """)
 
@@ -43,7 +45,7 @@ define gui.about = _p("""Привет!\n
 ## постройке дистрибутивов. Оно должно содержать текст формата ASCII и не должно
 ## содержать пробелы, двоеточия и точки с запятой.
 
-define build.name = "2k17"
+define build.name = "sohri"
 
 
 ## Звуки и музыка ##############################################################
