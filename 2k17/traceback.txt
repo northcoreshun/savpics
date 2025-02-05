@@ -1,92 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While processing text tag {a = https://fonts.google.com/specimen/Press+Start+2P/license} in 'Привет!\n\nЯ визуальная новелла "Сохры" сделанная специально для Капелла джема 2.\n\nЯ, конечно, не игра где ты типо грибок и прыгаешь по супер Марио, но надеюсь, что\n\nмиллионы в меня поиграли бы…\n\nТакже в игре содержатся материалы в соответствиями с лицензиями\n\n{a=https://www.sberbank.com/common/img/uploaded/files/promo/kandinskiy-terms/kandinskiy-terms-of-use.pdf}Kandinsky{/a}, {a = https://fonts.google.com/specimen/Press+Start+2P/license}OFL{/a} {a=https://pixai.art/model/1816942757386940962}модели PixAI{/a}, {a=https://pixabay.com/ru/service/license-summary/}Pixabay{/a}, {a=https://zvukipro.com/uslovija-ispolzovanija.html}Zvukipro{/a} и {a=https://freesound.org/help/tos_web/#intellectual-property-rights}Freesound{/a}.\n\nДля просмотра некоторых лицензий требуется VPN\n\n\n'.:
-  File "renpy/common/00gamemenu.rpy", line 174, in script
-    $ ui.interact()
-  File "renpy/common/00gamemenu.rpy", line 174, in <module>
-    $ ui.interact()
-Exception: Unknown text tag 'a = https://fonts.google.com/specimen/Press+Start+2P/license'
+While running game code:
+  File "game/script.rpy", line 603, in script
+    "Как и предложила Настя, ребята приехали туда,\n где живут девчата – микрорайон "Щербинки-3"."
+Exception: Say has image attributes ('Щербинки-3',), but there's no image tag associated with the speaking character.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00gamemenu.rpy", line 174, in script
-    $ ui.interact()
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ast.py", line 1138, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00gamemenu.rpy", line 174, in <module>
-    $ ui.interact()
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 3582, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 4175, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\core.py", line 2782, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\screen.py", line 731, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 888, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 1338, in render
-    surf = render(child,
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 1064, in render
-    surf = render(d, rw, height - y, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 1338, in render
-    surf = render(child,
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 1851, in render
-    cwidth, cheight = sizeit('c', width, height, 0, 0)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 1848, in sizeit
-    rend = renpy.display.render.render_for_size(pos_d[pos], width, height, st, at)
-  File "render.pyx", line 318, in renpy.display.render.render_for_size
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\viewport.py", line 285, in render
-    surf = renpy.display.render.render(self.child, child_width, child_height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 1109, in render
-    surf = render(d, width - x, rh, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\display\layout.py", line 1109, in render
-    surf = render(d, width - x, rh, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\text\text.py", line 2171, in render
-    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\text\text.py", line 629, in __init__
-    self.paragraphs = self.segment(text.tokens, style, renders, text)
-  File "D:\all_Kvasych_games\cren'pie\renpy-8.1.3-sdk\renpy\text\text.py", line 1289, in segment
-    raise Exception("Unknown text tag %r" % text)
-Exception: Unknown text tag 'a = https://fonts.google.com/specimen/Press+Start+2P/license'
+  File "game/script.rpy", line 603, in script
+    "Как и предложила Настя, ребята приехали туда,\n где живут девчата – микрорайон "Щербинки-3"."
+  File "C:\Users\Андрей Варфоломеев\Desktop\renpy-8.1.3-sdk\renpy\ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Андрей Варфоломеев\Desktop\renpy-8.1.3-sdk\renpy\exports.py", line 1472, in say
+    renpy.store.say(who, what, *args, **kwargs)
+  File "C:\Users\Андрей Варфоломеев\Desktop\renpy-8.1.3-sdk\renpy\defaultstore.py", line 418, in say
+    who(what, interact=interact, *args, **kwargs)
+  File "C:\Users\Андрей Варфоломеев\Desktop\renpy-8.1.3-sdk\renpy\character.py", line 1290, in __call__
+    old_attr_state = self.handle_say_attributes(False, interact)
+  File "C:\Users\Андрей Варфоломеев\Desktop\renpy-8.1.3-sdk\renpy\character.py", line 1109, in handle_say_attributes
+    if self.resolve_say_attributes(predicting, attrs):
+  File "C:\Users\Андрей Варфоломеев\Desktop\renpy-8.1.3-sdk\renpy\character.py", line 1035, in resolve_say_attributes
+    raise Exception("Say has image attributes %r, but there's no image tag associated with the speaking character." % (attrs,))
+Exception: Say has image attributes ('Щербинки-3',), but there's no image tag associated with the speaking character.
 
-Windows-10-10.0.19044 AMD64
+Windows-10-10.0.22631 AMD64
 Ren'Py 8.1.3.23091805
-Сохры 1.0
-Fri Jan 17 18:40:16 2025
+Сохры 1.01
+Fri Jan 17 23:32:37 2025

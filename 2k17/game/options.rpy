@@ -35,8 +35,8 @@ define gui.about = _p("""Привет!\n
 миллионы в меня поиграли бы…\n
 Также в игре содержатся материалы в соответствиями с лицензиями\n
 {a=https://www.sberbank.com/common/img/uploaded/files/promo/kandinskiy-terms/kandinskiy-terms-of-use.pdf}Kandinsky{/a},
-{a=https://fonts.google.com/specimen/Press+Start+2P/license}OFL{/a}, {a=https://pixai.art/model/1816942757386940962}модели PixAI{/a}, {a=https://pixabay.com/ru/service/license-summary/}Pixabay{/a}, {a=https://zvukipro.com/uslovija-ispolzovanija.html}Zvukipro{/a} и {a=https://freesound.org/help/tos_web/#intellectual-property-rights}Freesound{/a}.\n
-Для просмотра некоторых лицензий требуется VPN 
+{a=https://fonts.google.com/specimen/Press+Start+2P/license}OFL{/a}, {a=https://pixai.art/model/1816942757386940962}модели PixAI{/a}, {a=https://pixabay.com/ru/service/license-summary/}Pixabay{/a}, {a=https://zvukipro.com/uslovija-ispolzovanija.html}Zvukipro{/a}, {a=https://www.myinstants.com/ru/terms_of_use.html}Myinstants{/a} и {a=https://freesound.org/help/tos_web/#intellectual-property-rights}Freesound{/a}.\n
+Для просмотра некоторых лицензий требуется VPN. 
 
 """)
 

@@ -2,9 +2,7 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 1051: ATL statement contains two expressions in a row; is one of them a misspelled property? If not, separate them with pass.
-    text_size 30
-                ^
+File "game/script.rpy", line 1035: Tab characters are not allowed in Ren'Py scripts.
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Fri Jan 17 18:51:59 2025
+Fri Jan 17 23:19:32 2025
