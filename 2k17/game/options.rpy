@@ -23,7 +23,7 @@ define gui.show_name = False
 
 ## Версия игры.
 
-define config.version = "1.01"
+define config.version = "1.02"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными скобками.
@@ -31,7 +31,7 @@ define config.version = "1.01"
 
 define gui.about = _p("""Привет!\n
 Я визуальная новелла "Сохры" сделанная специально для Капелла джема 2.\n
-Я, конечно, не игра где ты типо грибок и прыгаешь по супер Марио, но надеюсь, что\n
+Я, конечно, не игра, где ты типо грибок и прыгаешь по супер Марио, но надеюсь, что\n
 миллионы в меня поиграли бы…\n
 Также в игре содержатся материалы в соответствиями с лицензиями\n
 {a=https://www.sberbank.com/common/img/uploaded/files/promo/kandinskiy-terms/kandinskiy-terms-of-use.pdf}Kandinsky{/a},
@@ -220,5 +220,16 @@ init python:
 ## разделённые дробью.
 
 # define build.itch_project = "renpytom/test-project"
+
+
+init python:
+    # Основная скорость пропуска текста (символов в секунду)
+    config.skip_delay = 55 # По умолчанию 100
+    
+
+    
+    # Альтернативный способ управления скоростью
+    _preferences.skip_after_choices = False  # Не пропускать после выборов
+    _preferences.skip_unseen = False  # Пропускать только прочитанный текст
 
 

@@ -283,8 +283,8 @@ style choice_button_text is default:
 screen history_bar:
     add "gui/left_bar.png":
         align (0.0,0.0)
-    add "gui/history_icon.png" xpos .15 ypos .96 anchor (1.0, 1.0)
-    text "История" size 20 align(.04,.8)
+    add "gui/history_icon.png" xpos .075 ypos .9 anchor (1.0, 1.0)
+    text "История" size 17 align(.003,.8)
 
 screen skip_bar:
     add "gui/right_bar.png":
@@ -292,8 +292,8 @@ screen skip_bar:
         yanchor 0.0
         xpos 1.0
         ypos 0.0
-    add "gui/skip_icon0.png" xpos 1.0 ypos 1. anchor (1.0, 1.0)
-    text "Пропуск" size 20 align(.94,.8)
+    add "gui/skip_icon0.png" xpos 1.01 ypos .91 anchor (1.0, 1.0)
+    text "Пропуск" size 17 align(.999,.8)
 
 screen quick_menu():
     tag menu
@@ -439,6 +439,7 @@ screen main_menu():
             textbutton _("СОХРЫ") action ShowMenu("about"):
                 text_size 50
                 style "main_menu_button"
+    
         frame:
             padding (20, 25, 20, 20) 
             xalign 0.5
@@ -835,6 +836,7 @@ screen preferences():
                         textbutton _("Всего текста") action Preference("skip", "toggle")
                         textbutton _("После выборов") action Preference("after choices", "toggle")
                         textbutton _("Переходов") action InvertSelected(Preference("transitions", "toggle"))
+                        textbutton _("Пропуск прочитанного") action Preference("skip", "seen")
 
                 ## Дополнительные vbox'ы типа "radio_pref" или "check_pref"
                 ## могут быть добавлены сюда для добавления новых настроек.
@@ -1234,18 +1236,13 @@ style help_label_text:
 ## https://www.renpy.org/doc/html/screen_special.html#confirm
 
 screen confirm(message, yes_action, no_action):
-
-    ## Гарантирует, что другие экраны будут недоступны, пока показан этот экран.
     modal True
-
     zorder 200
-
     style_prefix "confirm"
 
     add "gui/overlay/confirm.png"
 
     frame:
-
         vbox:
             xalign .5
             yalign .5
@@ -1254,15 +1251,23 @@ screen confirm(message, yes_action, no_action):
             label _(message):
                 style "confirm_prompt"
                 xalign 0.5
+                text_color "#ffffff"  # Белый цвет текста
 
             hbox:
                 xalign 0.5
                 spacing 150
 
-                textbutton _("Да") action yes_action
-                textbutton _("Нет") action no_action
+                textbutton _("Да"):
+                    action yes_action
+                    text_color "#ffffff"  # Белый цвет текста
 
-    ## Правый клик и esc, как ответ "Нет".
+                    text_size 25
+
+                textbutton _("Нет"):
+                    action no_action
+                    text_color "#ffffff"  # Белый цвет текста
+                    text_size 25
+
     key "game_menu" action no_action
 
 
@@ -1281,12 +1286,18 @@ style confirm_frame:
 style confirm_prompt_text:
     textalign 0.5
     layout "subtitle"
+    color "#ffffff"  # Белый цвет текста
 
 style confirm_button:
     properties gui.button_properties("confirm_button")
+    background "#000000"  # Черный фон кнопок
+    hover_background "#333333"  # Темно-серый при наведении
 
 style confirm_button_text:
-    properties gui.button_text_properties("confirm_button")
+    properties gui.text_properties("confirm_button")
+    color "#ffffff"  # Белый текст
+    hover_color "#aaaaaa"  # Серый при наведении
+    size 25
 
 
 ## Экран индикатора пропуска ###################################################
@@ -1301,7 +1312,7 @@ screen skip_indicator():
     zorder 100
     style_prefix "skip"
 
-    add "gui/skip_icon.png" xpos 1.0 ypos 1.0 anchor (1.0, 1.0) at skip_animation
+    add "gui/skip_icon.png" xpos 1.01 ypos .91 anchor (1.0, 1.0) at skip_animation
 
 
 ## Эта трансформация используется, чтобы мигать стрелками одна за другой.

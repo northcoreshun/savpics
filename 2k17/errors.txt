@@ -2,7 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 137: Tab characters are not allowed in Ren'Py scripts.
+File "game/options.rpy", line 225: expected statement.
+    config.skip_delay = 75  
+                      ^
+
+File "game/options.rpy", line 228: expected statement.
+    config.afm_bonus = 15  
+                     ^
+
+File "game/options.rpy", line 231: expected statement.
+    config.afm_time = 1.0  
+                    ^
 
 Ren'Py Version: Ren'Py 8.1.3.23091805
-Sun Mar 30 20:58:13 2025
+Sun Apr 13 20:48:43 2025
